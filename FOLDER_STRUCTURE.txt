@@ -1,242 +1,84 @@
-Project: Myportfolio
-Generated: 2025-09-18
+# Simple Folder Structure
 
-Overview:
-This file lists each folder and file with a brief description of its purpose. It is documentation only and does not modify any source code.
+## Root
+- .env.local
+- .gitignore
+- assets-image-list.txt
+- eslint.config.js
+- FOLDER_STRUCTURE.txt
+- index.html
+- jsrepo-build-config.json
+- jsrepo.json
+- package-lock.json
+- package.json
+- README.md
+- server.js
+- tailwind.config.js
+- vite.config.js
+- public/
+- src/
 
-Root files and folders:
-- .gitignore: Git ignore rules for the repository
-- eslint.config.js: ESLint configuration for linting JavaScript/React code
-- index.html: Main HTML template used by Vite to mount the React app
-- jsrepo-build-config.json: Build configuration (repository tooling)
-- jsrepo.json: Repository metadata/config for tooling
+## public
+- fav.png
+- logo.svg
+- logo1.svg
+- logo2.svg
+- Manrope-Bold.otf
+- Manrope-ExtraBold.otf
+- Manrope-ExtraLight.otf
+- Manrope-Light.otf
+- Manrope-Medium.otf
+- Manrope-Regular.otf
+- Manrope-SemiBold.otf
+- vite.svg
+- videos/
+  - video.mp4
+- assets/
+  - Bandg/
+  - Branding/
+  - Contractapp/
+  - Cp/
+  - DDF/
+  - Drimin/
+  - Entice/
+  - Med/
+  - Team/
+  - Tripzo/
+  - Yumwinn/
 
-- package-lock.json: Locked dependency versions for npm
-- package.json: Project metadata, scripts, and dependencies
-- README.md: Project documentation
-- tailwind.config.js: Tailwind CSS configuration
-- vite.config.js: Vite bundler configuration
-- public/: Public assets served as-is
-- src/: Application source code
-
-public/
-- logo1.svg: Logo asset
-- logo2.svg: Logo asset
-- Manrope-*.otf: Manrope font files used by the site
-- vite.svg: Default Vite SVG asset
-- assets/: Grouped public assets available at runtime
-
-public/assets/
-- Branding/: Branding images for projects (served from "/assets/..." URLs)
-
-public/assets/Branding/
-- Bandm/: Image set for the "Breeze & Mist" branding project
-  - img1.png: Branding image 1
-  - img2.png: Branding image 2
-  - img3.png: Branding image 3
-  - img4.png: Branding image 4
-  - img5.png: Branding image 5
-  - img6.png: Branding image 6
-  - img7.png: Branding image 7
-
-src/
-- App.jsx: Root React component; composes pages/components and routing
-- index.css: Global styles (Tailwind + custom)
-- main.jsx: App entry point; mounts React app to the DOM
-- assets/: Static assets imported in components (bundled by Vite)
-- backgrounds/: Placeholder folder for background resources
-- components/: Reusable UI components and visual effects
-- Context/: React context providers
-- pages/: Top-level page components (routed views)
-- Projectpage/: Standalone project page component(s)
-- new.json: Sample data (projects/assets list) consumed by the app
-
-src/assets/
-- logo1.svg: Logo asset used inside the app
-- react.svg: React logo asset
-- video.mp4: Video asset used on pages/components
-
-src/backgrounds/
-- (empty or reserved for future background assets)
-
-src/Context/
-- NavContext.jsx: React Context for navigation state and behaviors
-
-src/pages/
-- Agency.jsx: Agency page; showcases team, services, and animations
-- Contact.jsx: Contact page; forms and contact information
-- Home.jsx: Home/landing page; hero and featured sections
-- Projects.jsx: Projects listing page; shows portfolio items
-
-src/Projectpage/
-- Portfolio.jsx: Detailed portfolio/project page component
-
-src/components/
-- agency/: Components specific to the Agency page
-- Animations/: Reusable visual/interactive animation components
-- backgrounds/: Simple background text/visual component(s)
-- Bg /: Advanced background shader/visual effect components (note: folder name contains a trailing space)
-- common/: Common/shared UI snippets
-- home/: Components used on the Home page
-- Navigation/: Site navigation components
-- NNav/: Experimental/novel navigation and interactive UI components
-- projects/: Components for Projects sections/cards
-- text/: Text effect components (visual/animated text)
-- TextAnimations/: Additional text animation utilities
--loder/ loader.jsx
-
-src/components/agency/
-- AgencyCard.jsx: Card UI for agency items/showcases
-- AgencyFAQ.jsx: FAQ section component for agency page
-- AgencyPeople.jsx: People/team showcase component
-- Ro: Placeholder or incomplete file; purpose unclear
-
-src/components/Animations/
-- AnimatedContent/AnimatedContent.jsx: Animate children on enter/scroll
-- BlobCursor/BlobCursor.jsx: Gooey/blur cursor effect
-- ClickSpark/ClickSpark.jsx: Spark particles on click interactions
-- Crosshair/Crosshair.jsx: Crosshair cursor/aim effect
-- Cubes/Cubes.jsx: Cubic 3D/transform animation
-- ElectricBorder/ElectricBorder.jsx: Electric/glowing border animation
-- FadeContent/FadeContent.jsx: Fade-in/out content animation
-- GlareHover/GlareHover.jsx: Hover glare/shimmer effect
-- GradualBlur/GradualBlur.jsx: Gradual blur on scroll/hover
-- ImageTrail/ImageTrail.jsx: Cursor-following image trail effect
-- LaserFlow/LaserFlow.jsx: Laser line flowing animation
-- LogoLoop/LogoLoop.jsx: Looping logo animation
-- Magnet/Magnet.jsx: Magnetic hover attraction effect
-- MagnetLines/MagnetLines.jsx: Magnetic lines attraction animation
-- MetaBalls/MetaBalls.jsx: Metaballs morphing effect
-- MetallicPaint/MetallicPaint.jsx: Metallic shader paint effect
-- Noise/Noise.jsx: Noise overlay/animation
-- PixelTrail/PixelTrail.jsx: Pixelated cursor trail effect
-- PixelTransition/PixelTransition.jsx: Pixelated page/section transition
-- Ribbons/Ribbons.jsx: Flowing ribbon visuals
-- ShapeBlur/ShapeBlur.jsx: Shape-based blur animation
-- SplashCursor/SplashCursor.jsx: Splash cursor interaction
-- StarBorder/StarBorder.jsx: Star-pattern border animation
-- StickerPeel/StickerPeel.jsx: Sticker peel hover animation
-- TargetCursor/TargetCursor.jsx: Target cursor effect
-
-src/components/backgrounds/
-- FallingText.jsx: Falling text visual background component
-
-src/components/Bg /
-- Aurora/Aurora.jsx: Aurora-like background shader
-- Balatro/Balatro.jsx: Balatro-styled background effect
-- Ballpit/Ballpit.jsx: Bouncing balls background
-- Beams/Beams.jsx: Light beams animated background
-- DarkVeil/DarkVeil.jsx: Dark veil overlay effect
-- Dither/Dither.jsx: Dithering pattern background
-- DotGrid/DotGrid.jsx: Dotted grid animated background
-- FaultyTerminal/FaultyTerminal.jsx: Glitchy terminal background
-- Galaxy/Galaxy.jsx: Galaxy/starfield background
-- GradientBlinds/GradientBlinds.jsx: Gradient blinds animation
-- GridDistortion/GridDistortion.jsx: Distorted grid shader
-- GridMotion/GridMotion.jsx: Moving grid background
-- Hyperspeed/Hyperspeed.jsx: Hyperspeed tunnel effect
-- Hyperspeed/HyperSpeedPresets.js: Presets/configs for Hyperspeed
-- Iridescence/Iridescence.jsx: Iridescent surface effect
-- LetterGlitch/LetterGlitch.jsx: Letter glitch effect
-- Lightning/Lightning.jsx: Lightning bolt animation
-- LightRays.jsx: Shared LightRays helper/component
-- LightRays/LightRays.jsx: Light rays animated effect
-- LiquidChrome/LiquidChrome.jsx: Liquid chrome shader
-- LiquidEther/LiquidEther.jsx: Liquid ether shader
-- Orb/Orb.jsx: Orbital blobs background
-- Particles/Particles.jsx: Particle system background
-- PixelBlast/PixelBlast.jsx: Pixel blast transition/effect
-- Plasma/Plasma.jsx: Plasma field animation
-- Prism/Prism.jsx: Prism refraction effect
-- PrismaticBurst/PrismaticBurst.jsx: Prismatic burst animation
-- RippleGrid/RippleGrid.jsx: Rippled grid waves
-- Silk/Silk.jsx: Flowing silk effect
-- Squares/Squares.jsx: Animated squares pattern
-- Threads/Threads.jsx: Threaded lines animation
-- Waves/Waves.jsx: Waves/liquid waves background
-
-src/components/common/
-- Stairs.jsx: Stair-step layout/animation helper
-
-src/components/home/
-- HomeBottomtxt.jsx: Bottom text/CTA for home page
-- HomeHerotxt.jsx: Hero text section for home page
-- Video.jsx: Video component wrapper/renderer
-
-src/components/Navigation/
-- FlowingMenu/FlowingMenu.jsx: Flowing menu component variant
-- FullScreenNav.jsx: Full-screen overlay navigation
-- Navbar.jsx: Main top navigation bar
-
-src/components/NNav/
-- AnimatedList/AnimatedList.jsx: Animated list UI
-- BounceCards/BounceCards.jsx: Bouncy card UI interaction
-- BubbleMenu/BubbleMenu.jsx: Bubble-style menu
-- CardNav/CardNav.jsx: Card-based navigation
-- CardSwap/CardSwap.jsx: Swapping card interactions
-- Carousel/Carousel.jsx: Carousel/slider component
-- ChromaGrid/ChromaGrid.jsx: Chromatic grid visual
-- CircularGallery/CircularGallery.jsx: Circular gallery layout
-- Counter/Counter.jsx: Animated counter
-- DecayCard/DecayCard.jsx: Decaying effect card
-- Dock/Dock.jsx: Dock-style icon bar
-- DomeGallery/DomeGallery.jsx: Dome/curved gallery effect
-- ElasticSlider/ElasticSlider.jsx: Elastic slider component
-- FlowingMenu/FlowingMenu.jsx: Flowing menu variant
-- FluidGlass/FluidGlass.jsx: Fluid glass morph UI
-- FlyingPosters/FlyingPosters.jsx: Poster fly-through effect
-- Folder/Folder.jsx: Folder UI component
-- GlassIcons/GlassIcons.jsx: Glass-styled icons grid
-- GlassSurface/GlassSurface.jsx: Glass surface reflection UI
-- GooeyNav/GooeyNav.jsx: Gooey/morphing navigation bar
-- InfiniteMenu/InfiniteMenu.jsx: Infinite scrollable menu
-- InfiniteScroll/InfiniteScroll.jsx: Infinite scrolling list/grid
-- Lanyard/Lanyard.jsx: 3D model viewer component
-- Lanyard/card.glb: 3D model for lanyard
-- Lanyard/lanyard.png: Texture/image for lanyard
-- MagicBento/MagicBento.jsx: Animated bento grid UI
-- Masonry/Masonry.jsx: Masonry layout component
-- ModelViewer/ModelViewer.jsx: 3D model viewer component
-- PillNav/PillNav.jsx: Pill-style navigation
-- PixelCard/PixelCard.jsx: Pixelated card effect
-- RollingGallery/RollingGallery.jsx: Rolling gallery carousel
-- ScrollStack/ScrollStack.jsx: Stacked scroll sections
-- SpotlightCard/SpotlightCard.jsx: Spotlight hover card
-- Stack/Stack.jsx: Stacked cards/components
-- StaggeredMenu/StaggeredMenu.jsx: Staggered animated menu
-- Stepper/Stepper.jsx: Stepper/progress component
-- TiltedCard/TiltedCard.jsx: Tilted parallax card
-
-src/components/projects/
-- PortfolioSection.jsx: Portfolio section layout on projects page
-- ProjectsCard.jsx: Project card used in listings
-
-src/components/text/
-- ASCIIText/ASCIIText.jsx: ASCII-style text rendering
-- BlurText/BlurText.jsx: Text blur reveal effect
-- CircularText.jsx: Circular text wrapper/renderer
-- CircularText/Curved text utilities
-- CountUp/CountUp.jsx: Animated number counter
-- CurvedLoop/CurvedLoop.jsx: Curved marquee/loop text
-- DecryptedText/DecryptedText.jsx: Decrypt/typing effect
-- FallingText.jsx: Falling text effect wrapper
-- FuzzyText/FuzzyText.jsx: Fuzzy noise text effect
-- GlitchText/GlitchText.jsx: Glitch text effect
-- GradientText/GradientText.jsx: Gradient-filled animated text
-- RotatingText/RotatingText.jsx: Rotating text effect
-- ScrambledText/ScrambledText.jsx: Scramble-to-reveal text
-- ScrollFloat/ScrollFloat.jsx: Floating on scroll effect
-- ScrollReveal/ScrollReveal.jsx: Reveal on scroll text
-- ScrollVelocity.jsx: Scroll velocity tracker/display
-- ShinyText/ShinyText.jsx: Shiny sweep text effect
-- Shuffle/Shuffle.jsx: Shuffle characters effect
-- SplitText/SplitText.jsx: Split text into characters/words for animation
-- TextCursor/TextCursor.jsx: Typewriter cursor effect
-- TextPressure/TextPressure.jsx: Pressure/proximity warping
-- TextTrail/TextTrail.jsx: Mouse-following text trail
-- TextType/TextType.jsx: Typewriter effect component
-- TrueFocus/TrueFocus.jsx: Focus ring/highlight effect
-- VariableProximity/VariableProximity.jsx: Proximity-based text morphing
-
-src/components/TextAnimations/
-- SplitText/SplitText.jsx: Text splitting utility/animation
+## src
+- App.jsx
+- index.css
+- main.jsx
+- new.json
+- assets/
+  - logo1.svg
+  - react.svg
+  - video.mp4
+- backgrounds/
+- components/
+  - Loader.jsx
+  - agency/
+  - Animations/
+  - backgrounds/
+  - Bg /
+  - common/
+  - home/
+  - Navigation/
+  - NNav/
+  - projects/
+  - text/
+  - TextAnimations/
+- Context/
+  - NavContext.jsx
+- hooks/
+  - useCriticalImages.js
+- pages/
+  - Aboutus.jsx
+  - Contact.jsx
+  - Home.jsx
+  - Projects.jsx
+- Projectpage/
+  - Portfolio.jsx
+- utils/
+  - ImageCache.js

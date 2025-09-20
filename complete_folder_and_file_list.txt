@@ -1,0 +1,282 @@
+COMPLETE FOLDER AND FILE LIST
+MyPortfolio Project Structure
+====================================
+
+ROOT DIRECTORY (c:\Users\user\Desktop\Myportfolio)
+├── .git/ (directory)
+├── .gitignore
+├── FOLDER_STRUCTURE.txt
+├── README.md
+├── assets-image-list.txt
+├── eslint.config.js
+├── index.html
+├── jsrepo-build-config.json
+├── jsrepo.json
+├── package-lock.json
+├── package.json
+├── tailwind.config.js
+├── vercel.json
+├── vite.config.js
+├── public/ (directory)
+│   ├── Manrope-Bold.otf
+│   ├── Manrope-ExtraBold.otf
+│   ├── Manrope-ExtraLight.otf
+│   ├── Manrope-Light.otf
+│   ├── Manrope-Medium.otf
+│   ├── Manrope-Regular.otf
+│   ├── Manrope-SemiBold.otf
+│   ├── fav.png
+│   ├── logo.svg
+│   ├── logo1.svg
+│   ├── logo2.svg
+│   ├── vite.svg
+│   ├── assets/ (directory)
+│   │   ├── Bandg/ (directory)
+│   │   ├── Branding/ (directory)
+│   │   ├── Contractapp/ (directory)
+│   │   ├── Cp/ (directory)
+│   │   ├── DDF/ (directory)
+│   │   ├── Drimin/ (directory)
+│   │   ├── Entice/ (directory)
+│   │   ├── Med/ (directory)
+│   │   ├── Team/ (directory)
+│   │   ├── Tripzo/ (directory)
+│   │   └── Yumwinn/ (directory)
+│   └── videos/ (directory)
+│       └── video.mp4
+└── src/ (directory)
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    ├── Projectpage/ (directory)
+    │   └── Portfolio.jsx
+    ├── assets/ (directory)
+    │   ├── logo1.svg
+    │   └── react.svg
+    ├── backgrounds/ (directory - empty)
+    ├── components/ (directory)
+    │   ├── Loader.jsx
+    │   ├── Animations/ (directory)
+    │   │   ├── AnimatedContent/ (directory)
+    │   │   │   └── AnimatedContent.jsx
+    │   │   ├── BlobCursor/ (directory)
+    │   │   │   └── BlobCursor.jsx
+    │   │   ├── ClickSpark/ (directory)
+    │   │   │   └── ClickSpark.jsx
+    │   │   ├── Crosshair/ (directory)
+    │   │   │   └── Crosshair.jsx
+    │   │   ├── Cubes/ (directory)
+    │   │   │   └── Cubes.jsx
+    │   │   ├── ElectricBorder/ (directory)
+    │   │   │   └── ElectricBorder.jsx
+    │   │   ├── FadeContent/ (directory)
+    │   │   │   └── FadeContent.jsx
+    │   │   ├── GlareHover/ (directory)
+    │   │   │   └── GlareHover.jsx
+    │   │   ├── GradualBlur/ (directory)
+    │   │   │   └── GradualBlur.jsx
+    │   │   ├── ImageTrail/ (directory)
+    │   │   │   └── ImageTrail.jsx
+    │   │   ├── LaserFlow/ (directory)
+    │   │   │   └── LaserFlow.jsx
+    │   │   ├── LogoLoop/ (directory)
+    │   │   │   └── LogoLoop.jsx
+    │   │   ├── Magnet/ (directory)
+    │   │   │   └── Magnet.jsx
+    │   │   ├── MagnetLines/ (directory)
+    │   │   │   └── MagnetLines.jsx
+    │   │   ├── MetaBalls/ (directory)
+    │   │   │   └── MetaBalls.jsx
+    │   │   ├── MetallicPaint/ (directory)
+    │   │   │   └── MetallicPaint.jsx
+    │   │   ├── Noise/ (directory)
+    │   │   │   └── Noise.jsx
+    │   │   ├── PixelTrail/ (directory)
+    │   │   │   └── PixelTrail.jsx
+    │   │   ├── PixelTransition/ (directory)
+    │   │   │   └── PixelTransition.jsx
+    │   │   ├── Ribbons/ (directory)
+    │   │   │   └── Ribbons.jsx
+    │   │   ├── ShapeBlur/ (directory)
+    │   │   │   └── ShapeBlur.jsx
+    │   │   ├── SplashCursor/ (directory)
+    │   │   │   └── SplashCursor.jsx
+    │   │   ├── StarBorder/ (directory)
+    │   │   │   └── StarBorder.jsx
+    │   │   ├── StickerPeel/ (directory)
+    │   │   │   └── StickerPeel.jsx
+    │   │   └── TargetCursor/ (directory)
+    │   │       └── TargetCursor.jsx
+    │   ├── Bg/ (directory - empty)
+    │   ├── Bg / (directory - empty) [NOTE: Has space in name]
+    │   ├── NNav/ (directory)
+    │   │   ├── AnimatedList/ (directory)
+    │   │   │   └── AnimatedList.jsx
+    │   │   ├── BounceCards/ (directory)
+    │   │   │   └── BounceCards.jsx
+    │   │   ├── BubbleMenu/ (directory)
+    │   │   │   └── BubbleMenu.jsx
+    │   │   ├── CardNav/ (directory)
+    │   │   │   └── CardNav.jsx
+    │   │   ├── CardSwap/ (directory)
+    │   │   │   └── CardSwap.jsx
+    │   │   ├── Carousel/ (directory)
+    │   │   │   └── Carousel.jsx
+    │   │   ├── ChromaGrid/ (directory)
+    │   │   │   └── ChromaGrid.jsx
+    │   │   ├── CircularGallery/ (directory)
+    │   │   │   └── CircularGallery.jsx
+    │   │   ├── Counter/ (directory)
+    │   │   │   └── Counter.jsx
+    │   │   ├── DecayCard/ (directory)
+    │   │   │   └── DecayCard.jsx
+    │   │   ├── Dock/ (directory)
+    │   │   │   └── Dock.jsx
+    │   │   ├── DomeGallery/ (directory)
+    │   │   │   └── DomeGallery.jsx
+    │   │   ├── ElasticSlider/ (directory)
+    │   │   │   └── ElasticSlider.jsx
+    │   │   ├── FlowingMenu/ (directory)
+    │   │   │   └── FlowingMenu.jsx
+    │   │   ├── FluidGlass/ (directory)
+    │   │   │   └── FluidGlass.jsx
+    │   │   ├── FlyingPosters/ (directory)
+    │   │   │   └── FlyingPosters.jsx
+    │   │   ├── Folder/ (directory)
+    │   │   │   └── Folder.jsx
+    │   │   ├── GlassIcons/ (directory)
+    │   │   │   └── GlassIcons.jsx
+    │   │   ├── GlassSurface/ (directory)
+    │   │   │   └── GlassSurface.jsx
+    │   │   ├── GooeyNav/ (directory)
+    │   │   │   └── GooeyNav.jsx
+    │   │   ├── InfiniteMenu/ (directory)
+    │   │   │   └── InfiniteMenu.jsx
+    │   │   ├── InfiniteScroll/ (directory)
+    │   │   │   └── InfiniteScroll.jsx
+    │   │   ├── Lanyard/ (directory)
+    │   │   │   ├── Lanyard.jsx
+    │   │   │   ├── card.glb
+    │   │   │   └── lanyard.png
+    │   │   ├── MagicBento/ (directory)
+    │   │   │   └── MagicBento.jsx
+    │   │   ├── Masonry/ (directory)
+    │   │   │   └── Masonry.jsx
+    │   │   ├── ModelViewer/ (directory)
+    │   │   │   └── ModelViewer.jsx
+    │   │   ├── PillNav/ (directory)
+    │   │   │   └── PillNav.jsx
+    │   │   ├── PixelCard/ (directory)
+    │   │   │   └── PixelCard.jsx
+    │   │   ├── RollingGallery/ (directory)
+    │   │   │   └── RollingGallery.jsx
+    │   │   ├── ScrollStack/ (directory)
+    │   │   │   └── ScrollStack.jsx
+    │   │   ├── SpotlightCard/ (directory)
+    │   │   │   └── SpotlightCard.jsx
+    │   │   ├── Stack/ (directory)
+    │   │   │   └── Stack.jsx
+    │   │   ├── StaggeredMenu/ (directory)
+    │   │   │   └── StaggeredMenu.jsx
+    │   │   ├── Stepper/ (directory)
+    │   │   │   └── Stepper.jsx
+    │   │   └── TiltedCard/ (directory)
+    │   │       └── TiltedCard.jsx
+    │   ├── Navigation/ (directory)
+    │   │   ├── FullScreenNav.jsx
+    │   │   ├── Navbar.jsx
+    │   │   └── FlowingMenu/ (directory)
+    │   │       └── FlowingMenu.jsx
+    │   ├── TextAnimations/ (directory)
+    │   │   └── SplitText/ (directory)
+    │   │       └── SplitText.jsx
+    │   ├── agency/ (directory)
+    │   │   ├── AgencyCard.jsx
+    │   │   ├── AgencyFAQ.jsx
+    │   │   └── AgencyPeople.jsx
+    │   ├── backgrounds/ (directory)
+    │   │   └── FallingText.jsx
+    │   ├── common/ (directory)
+    │   │   ├── Footer.jsx
+    │   │   ├── MoreProjects.jsx
+    │   │   ├── ScrollTop.jsx
+    │   │   └── Stairs.jsx
+    │   ├── home/ (directory)
+    │   │   ├── HomeBottomtxt.jsx
+    │   │   ├── HomeHerotxt.jsx
+    │   │   └── Video.jsx
+    │   ├── projects/ (directory)
+    │   │   ├── PortfolioSection.jsx
+    │   │   └── ProjectsCard.jsx
+    │   └── text/ (directory)
+    │       ├── CircularText.jsx
+    │       ├── FallingText.jsx
+    │       ├── ScrollVelocity.jsx
+    │       ├── TextPressure.jsx
+    │       ├── ASCIIText/ (directory)
+    │       │   └── ASCIIText.jsx
+    │       ├── BlurText/ (directory)
+    │       │   └── BlurText.jsx
+    │       ├── CircularText/ (directory - empty)
+    │       ├── CountUp/ (directory)
+    │       │   └── CountUp.jsx
+    │       ├── CurvedLoop/ (directory)
+    │       │   └── CurvedLoop.jsx
+    │       ├── DecryptedText/ (directory)
+    │       │   └── DecryptedText.jsx
+    │       ├── FallingText/ (directory - empty)
+    │       ├── FuzzyText/ (directory)
+    │       │   └── FuzzyText.jsx
+    │       ├── GlitchText/ (directory)
+    │       │   └── GlitchText.jsx
+    │       ├── GradientText/ (directory)
+    │       │   └── GradientText.jsx
+    │       ├── RotatingText/ (directory)
+    │       │   └── RotatingText.jsx
+    │       ├── ScrambledText/ (directory)
+    │       │   └── ScrambledText.jsx
+    │       ├── ScrollFloat/ (directory)
+    │       │   └── ScrollFloat.jsx
+    │       ├── ScrollReveal/ (directory)
+    │       │   └── ScrollReveal.jsx
+    │       ├── ShinyText/ (directory)
+    │       │   └── ShinyText.jsx
+    │       ├── Shuffle/ (directory)
+    │       │   └── Shuffle.jsx
+    │       ├── SplitText/ (directory)
+    │       │   └── SplitText.jsx
+    │       ├── TextCursor/ (directory)
+    │       │   └── TextCursor.jsx
+    │       ├── TextPressure/ (directory - empty)
+    │       ├── TextTrail/ (directory)
+    │       │   └── TextTrail.jsx
+    │       ├── TextType/ (directory)
+    │       │   └── TextType.jsx
+    │       ├── TrueFocus/ (directory)
+    │       │   └── TrueFocus.jsx
+    │       └── VariableProximity/ (directory)
+    │           └── VariableProximity.jsx
+    ├── context/ (directory)
+    │   └── NavContext.jsx
+    ├── data/ (directory)
+    │   └── projectsData.js
+    ├── hooks/ (directory)
+    │   └── useCriticalImages.js
+    ├── pages/ (directory)
+    │   ├── Aboutus.jsx
+    │   ├── Contact.jsx
+    │   ├── Home.jsx
+    │   └── Projects.jsx
+    └── utils/ (directory)
+        └── ImageCache.js
+
+SPECIAL NOTES:
+- "Bg " folder name includes a trailing space
+- All folder and file names preserved exactly as they appear in the file system
+- Empty directories are marked as "(directory - empty)"
+- Mixed case capitalization preserved (e.g., "Projectpage", "NNav", "TextAnimations")
+- File extensions preserved exactly (.jsx, .js, .svg, .png, .glb, .mp4, .otf, etc.)
+
+Total directories: 90+
+Total files: 150+
+Generated on: 2025-09-20

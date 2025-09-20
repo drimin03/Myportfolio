@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: auto !important;
+}
+
+body {
+  overscroll-behavior: none;
+}
+@font-face {
+  font-family: manrope;
+  src: url(../public/Manrope-Bold.otf);
+}
+@font-face {
+  font-family: manrope1;
+  src: url(../public/Manrope-SemiBold.otf);
+}
+
+@font-face {
+  font-family: manrope2;
+  src: url(../public/Manrope-Medium.otf);
+}
+@font-face {
+  font-family: manrope3;
+  src: url(../public/Manrope-Regular.otf);
+
+}
+@font-face {
+  font-family: manrope4;
+  src: url(../public/Manrope-Light.otf);
+}
+@font-face {
+  font-family: manrope5;
+  src: url(../public/Manrope-ExtraBold.otf);
+}
+.logo{
+  src: url(../public/logo1.svg);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* scroll halfway since duplicated */
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  min-width: max-content;
+}
+.marquee-text {
+  will-change: transform;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.marquee-container {
+  width: 200%;
+}
+
+.marquee-container {
+  display: flex;
+  width: fit-content;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  padding-right: 4rem;
+}
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes bounceIn {
+          0% {
+            opacity: 0;
+            transform: scale(0.3) translateY(-10px);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.05) translateY(-2px);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-up-delay {
+          animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .animate-slide-in-right {
+          animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        .animate-bounce-in {
+          animation: bounceIn 0.5s ease-out forwards;
+        }
+        .highlighted-word {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 4px 8px;
+  margin: 0 2px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+        .lenis-content::-webkit-scrollbar { display: none; }
+        .lenis-content { scrollbar-width: none; -ms-overflow-style: none; }
+      
+  @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .animate-spin {
+          animation: spin 1.5s linear infinite;
+        }     
+/* Add this to your global CSS file (index.css or App.css) */
+
+/* Fade out animation for video loading overlay */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Smooth video loading animation */
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.video-container.loading::before {
+  left: 100%;
+}
+
+/* Enhanced loading spinner */
+@keyframes spinGlow {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.spinner-glow {
+  animation: spinGlow 1.5s linear infinite;
+}
+
+/* Pulse animation for progress bar */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.progress-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Improved video focus and performance */
+video {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize for mobile */
+@media (max-width: 768px) {
+  video {
+    object-position: center center;
+    transform: translateZ(0) scale(1.01); /* Slight scale to prevent edge artifacts */
+  }
+}

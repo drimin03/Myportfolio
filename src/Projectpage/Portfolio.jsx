@@ -8,8 +8,8 @@ import CircularText from "../components/text/CircularText";
 import PortfolioSection from "../components/projects/PortfolioSection";
 import MoreProjects from "../components/common/MoreProjects";
 import Loader from "../components/Loader";
-import projectsData from "../new.json";
-import { NavbarColorContext } from "../context/NavContext";
+import projectsData from "../data/projectsData.js";
+import { NavbarColorContext } from "../Context/NavContext";
 
 gsap.registerPlugin(ScrollTrigger);
 

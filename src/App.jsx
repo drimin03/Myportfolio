@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navigation/Navbar";
 import FullScreenNav from "./components/Navigation/FullScreenNav";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Portfolio from "./Projectpage/Portfolio";
@@ -23,25 +23,7 @@ const App = () => {
   // Preload critical images immediately when app starts
   useCriticalImages();
 
-  // Preload video immediately when app starts
-  useEffect(() => {
-    // Preload the hero video
-    const videoLink = document.createElement('link');
-    videoLink.rel = 'preload';
-    videoLink.href = '/videos/video.mp4';
-    videoLink.as = 'video';
-    videoLink.type = 'video/mp4';
-    document.head.appendChild(videoLink);
-
-    console.log('🎥 Video preloading started');
-
-    // Cleanup function
-    return () => {
-      if (document.head.contains(videoLink)) {
-        document.head.removeChild(videoLink);
-      }
-    };
-  }, []);
+  // No video assets to preload
 
   // Optional: Set up image cache monitoring (remove in production)
   useEffect(() => {

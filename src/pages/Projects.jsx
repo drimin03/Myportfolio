@@ -4,8 +4,8 @@ import ProjectsCard from "../components/projects/ProjectsCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Lenis from "@studio-freight/lenis";
-import projectsData from "../new.json";
+import Lenis from "lenis";
+import projectsData from "../data/projectsData.js";
 import Loader from "../components/Loader"; // ✅ Add Loader
 import { useRoutePreloader } from "../hooks/useCriticalImages"; // ✅ Add route preloader
 

@@ -8,9 +8,9 @@
   "configFiles": {},
   "paths": {
     "*": "./src/components/",
-    "Components": "./src/Components/NNav",
-    "TextAnimations": "./src/Components/text",
-    "Animations": "./src/Components/Animations",
-    "Backgrounds": "./src/Components/Bg "
+    "Components": "./src/components/NNav",
+    "TextAnimations": "./src/components/text",
+    "Animations": "./src/components/Animations",
+    "Backgrounds": "./src/components/backgrounds"
   }
 }

@@ -9,7 +9,7 @@ import React, {
   Suspense,
 } from "react";
 import { ScrollTrigger } from "gsap/all";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import AgencyFAQ from "../components/agency/AgencyFAQ";
 import FallingText from "../components/text/FallingText";
 import LogoLoop from "../components/Animations/LogoLoop/LogoLoop";

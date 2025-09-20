@@ -4,8 +4,8 @@ import FlowingMenu from "../Navigation/FlowingMenu/FlowingMenu"
 import { useContext, useRef, useEffect } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { NavbarContext } from "../../context/NavContext"
-import Lenis from "@studio-freight/lenis"
+import { NavbarContext } from "../../Context/NavContext"
+import Lenis from "lenis"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const FullScreenNav = ({ onClose }) => {

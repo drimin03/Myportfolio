@@ -1,7 +1,7 @@
 // hooks/useCriticalImages.js
 import { useEffect } from 'react';
 import imageCache from '../utils/ImageCache';
-import projectsData from '../new.json';
+import projectsData from '../data/projectsData.js';
 
 // Define critical images that should load immediately when app starts
 const CRITICAL_IMAGES = [

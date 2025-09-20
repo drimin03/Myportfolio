@@ -112,27 +112,21 @@ function Loader({
 
     const loadImages = async () => {
       try {
-        // Check how many images are already cached
         const uncachedImages = images.filter(url => !imageCache.isImageCached(url));
         const alreadyCached = images.length - uncachedImages.length;
-        
-        console.log(`Loading images: ${alreadyCached} already cached, ${uncachedImages.length} to load`);
-        
+
         if (uncachedImages.length === 0) {
-          // All images already cached!
           setLoadingProgress(100);
           setLoadingComplete(true);
           return;
         }
 
-        // Set initial progress for already cached images
         if (alreadyCached > 0) {
           const initialProgress = (alreadyCached / images.length) * 100;
           setLoadingProgress(initialProgress);
         }
 
-        // Load remaining images with progress tracking
-        await imageCache.preloadImages(uncachedImages, (loaded, failed, total) => {
+        await imageCache.preloadImages(uncachedImages, (loaded, failed) => {
           const totalCompleted = alreadyCached + loaded + failed;
           const progress = (totalCompleted / images.length) * 100;
           setLoadingProgress(Math.min(progress, 100));
@@ -156,9 +150,7 @@ function Loader({
         setTimeout(() => {
           setShowMoveUp(true);
           setTimeout(() => {
-            if (onLoadComplete) {
-              onLoadComplete();
-            }
+            if (onLoadComplete) onLoadComplete();
           }, 1000);
         }, 500);
       } else {
@@ -169,12 +161,32 @@ function Loader({
     checkCompletion();
   };
 
+  const loadingText = "Your experience is loading… almost there";
+
   return (
     <div
       className={`fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-black text-black h-screen w-screen transition-transform duration-1000 ease-in-out ${
         showMoveUp ? "-translate-y-full" : "translate-y-0"
       }`}
     >
+      {/* Staggered Loading Text */}
+      <div className="pb-4">
+        <p className="text-center text-white font-[manrope4] text-lg md:text-xl flex justify-center flex-wrap">
+          {loadingText.split("").map((char, index) => (
+            <span
+              key={index}
+              className="inline-block transition-transform duration-500 ease-out"
+              style={{
+                transitionDelay: `${index * 50}ms`,
+                transform: showMoveUp ? "translateY(-100%)" : "translateY(0%)",
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </p>
+      </div>
+
       {/* Loading Progress Counter */}
       <div className="pb-16">
         <div className="text-center">
@@ -186,8 +198,6 @@ function Loader({
             className="font-[manrope4] text-8xl md:text-8xl font-bold text-white"
             onEnd={handleCountUpEnd}
           />
-          
-
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useEffect } from "react";
-import { NavbarColorContext, NavbarContext } from "../../context/NavContext";
+import { NavbarColorContext, NavbarContext } from "../../Context/NavContext";
 import gsap from "gsap";
 
 const Navbar = () => {

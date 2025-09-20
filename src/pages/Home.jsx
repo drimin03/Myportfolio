@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Video from "../components/home/Video";
 import HomeHerotxt from "../components/home/HomeHerotxt";
 import HomeBottomtxt from "../components/home/HomeBottomtxt";
 
@@ -11,14 +12,24 @@ const Home = () => {
       viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
     }
 
-    // No video assets to preload
+    // Add performance hints for the video
+    const performanceHint = document.createElement('link');
+    performanceHint.rel = 'prefetch';
+    performanceHint.href = '/videos/video.mp4';
+    document.head.appendChild(performanceHint);
+
+    return () => {
+      if (document.head.contains(performanceHint)) {
+        document.head.removeChild(performanceHint);
+      }
+    };
   }, []);
 
   return (
     <div className="relative">
-      {/* Fixed background container */}
+      {/* Fixed background video container */}
       <div className="h-screen w-screen fixed bg-black z-0">
-        <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black"></div>
+        <Video />
       </div>
       
       {/* Content overlay */}

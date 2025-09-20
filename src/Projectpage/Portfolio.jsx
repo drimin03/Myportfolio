@@ -9,7 +9,7 @@ import PortfolioSection from "../components/projects/PortfolioSection";
 import MoreProjects from "../components/common/MoreProjects";
 import Loader from "../components/Loader";
 import projectsData from "../data/projectsData.js";
-import { NavbarColorContext } from "../Context/NavContext";
+import { NavbarColorContext } from "../context/NavContext.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -162,7 +162,7 @@ function Portfolio() {
         {/* HORIZONTAL SCROLL SECTION */}
         <div className="bg-black w-full overflow-hidden">
           <section className="min-h-screen relative flex justify-center items-center">
-            <h1 className="absolute top-5 left-5 text-white text-[8px] md:text-[16px] font-[manrope4] w-[40%] md:w-[45%] pr-2">
+            <h1 className="absolute top-5 left-5 text-white text-[12px] md:text-[16px] font-[manrope4] w-[40%] md:w-[45%] pr-2">
               {project.description}
             </h1>
             <div className="absolute top-5 right-5 text-white text-[12px] md:text-[16px] font-[manrope4] w-[40%] md:w-[45%] text-right pl-2">

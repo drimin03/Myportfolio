@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "jsrepo build --allow-subdirectories",
+		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"build:registry": "jsrepo build"

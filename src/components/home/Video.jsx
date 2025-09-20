@@ -8,13 +8,11 @@ const Video = ({ onReady }) => {
     if (!video) return;
 
     const handleCanPlayThrough = () => {
-      console.log('🎥 Video can play through');
-      if (onReady) onReady(); // notify Home/Loader that video is ready
+      if (onReady) onReady();
     };
 
-    const handleError = (e) => {
-      console.error('🚫 Video failed to load', e);
-      if (onReady) onReady(); // even on error, let loader finish
+    const handleError = () => {
+      if (onReady) onReady(); // allow loader to finish even on error
     };
 
     video.addEventListener('canplaythrough', handleCanPlayThrough);

@@ -169,26 +169,8 @@ function Loader({
         showMoveUp ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      {/* Staggered Loading Text */}
-      <div className="pb-4">
-        <p className="text-center text-white font-[manrope4] text-lg md:text-xl flex justify-center flex-wrap">
-          {loadingText.split("").map((char, index) => (
-            <span
-              key={index}
-              className="inline-block transition-transform duration-500 ease-out"
-              style={{
-                transitionDelay: `${index * 50}ms`,
-                transform: showMoveUp ? "translateY(-100%)" : "translateY(0%)",
-              }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </span>
-          ))}
-        </p>
-      </div>
-
       {/* Loading Progress Counter */}
-      <div className="pb-16">
+      <div className="pb-4">
         <div className="text-center">
           <CountUp
             from={0}
@@ -199,6 +181,24 @@ function Loader({
             onEnd={handleCountUpEnd}
           />
         </div>
+      </div>
+
+      {/* Staggered Loading Text Below Counter */}
+      <div className="pt-6">
+        <p className="text-center text-white font-[manrope4] text-lg md:text-xl flex justify-center flex-wrap">
+          {loadingText.split("").map((char, index) => (
+            <span
+              key={index}
+              className="inline-block transition-transform duration-500 ease-out"
+              style={{
+                transitionDelay: `${index * 40}ms`, // continuous stagger
+                transform: showMoveUp ? "translateY(-100%)" : "translateY(0%)",
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </p>
       </div>
     </div>
   );

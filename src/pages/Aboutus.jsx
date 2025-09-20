@@ -400,7 +400,7 @@ const Aboutus = () => {
           <div className="relative z-[10] min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">
             <div className="max-w-7xl mx-auto px-8 lg:px-16">
               <div className="text-center mb-12">
-                <h1 className="lg:text-[30vh] text-[10vh] mt-0 uppercase  lg:leading-32 leading-10  p-[0] font-[manrope] font-black text-black mb-16">
+                <h1 className="lg:text-[30vh] text-[10vh] mt-0 uppercase  lg:leading-32 leading-20  p-[0] font-[manrope] font-black text-black mb-16">
                   What we do
                 </h1>
               </div>
@@ -431,8 +431,8 @@ const Aboutus = () => {
               </div>
 
               <div className="text-center mt-8">
-                <p className="text-sm lg:text-base text-gray-500 italic">
-                  Move your cursor around to interact with the falling words
+                <p className="text-sm lg:text-base text-gray-500 ">
+                  Move your cursor or click on scrren around to interact with the falling words
                 </p>
               </div>
             </div>

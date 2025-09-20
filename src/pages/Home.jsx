@@ -11,7 +11,7 @@ const Home = () => {
     <>
       {!isLoaded && (
         <Loader
-          images={['/videos/video.mp4']} // pass video to loader
+          images={['/videos/video.mp4']} // video preloaded by loader
           onLoadComplete={() => setIsLoaded(true)}
         />
       )}
@@ -19,7 +19,7 @@ const Home = () => {
       {isLoaded && (
         <div className="relative">
           <div className="h-screen w-screen fixed bg-black z-0">
-            <Video onReady={() => setIsLoaded(true)} /> {/* callback for video */}
+            <Video onReady={() => setIsLoaded(true)} />
           </div>
 
           <div className="h-screen w-screen relative pb-5 flex flex-col justify-between z-10">

@@ -320,6 +320,19 @@ const Aboutus = () => {
                     Our Process
                   </h2>
                   <p className="leading-relaxed text-transition">
+                    At Drimin Design, our process is simple yet powerful. We
+                    begin by discovering your brand, goals, and audience to
+                    understand your vision. From there, we define a clear
+                    strategy, covering everything from branding elements to
+                    website structure. Next, we move into the design stage,
+                    where we craft visuals, layouts, and experiences that truly
+                    reflect your brand identity. Our team then develops these
+                    ideas into seamless, responsive, and scalable solutions.
+                    Finally, we deliver and support your project, ensuring a
+                    successful launch and providing ongoing assistance for
+                    long-term growth.
+                  </p>
+                  {/* <p className="leading-relaxed text-transition">
                     <li>
                       <span className="font-[manrope5] uppercase ">
                         Creativity with Purpose
@@ -354,14 +367,14 @@ const Aboutus = () => {
                       – We stay honest and transparent, always delivering what
                       we promise.
                     </li>
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="flex flex-col gap-6 flex-1 ">
                   <h2 className="text-xl lg:text-2xl font-semibold text-transition">
                     Our Values
                   </h2>
-                  <p className="leading-relaxed text-transition">
+                  {/* <p className="leading-relaxed text-transition">
                     At Drimin Design, our process is simple yet powerful. We
                     begin by discovering your brand, goals, and audience to
                     understand your vision. From there, we define a clear
@@ -373,6 +386,42 @@ const Aboutus = () => {
                     Finally, we deliver and support your project, ensuring a
                     successful launch and providing ongoing assistance for
                     long-term growth.
+                  </p> */}
+                  <p className="leading-relaxed text-transition">
+                    <li>
+                      <span className="font-[manrope5] uppercase ">
+                        Creativity with Purpose
+                      </span>{" "}
+                      – We design not just to look good, but to make an impact.
+                    </li>
+                    <li>
+                      <span className="font-[manrope5] uppercase ">
+                        Collaboration
+                      </span>{" "}
+                      – Every project is built on open communication and strong
+                      partnerships with our clients.
+                    </li>
+                    <li>
+                      <span className="font-[manrope5] uppercase ">
+                        Innovation
+                      </span>{" "}
+                      – We embrace new ideas, tools, and trends to keep your
+                      brand ahead of the curve.
+                    </li>
+                    <li>
+                      <span className="font-[manrope5] uppercase ">
+                        Simplicity
+                      </span>{" "}
+                      – Clear, minimal, and effective design that resonates with
+                      your audience.
+                    </li>
+                    <li>
+                      <span className="font-[manrope5] uppercase ">
+                        Integrity
+                      </span>{" "}
+                      – We stay honest and transparent, always delivering what
+                      we promise.
+                    </li>
                   </p>
                 </div>
               </div>

@@ -94,17 +94,17 @@ const projectsData = [
   {
     "id": 7,
     "type": "Branding",
-    "name": "Breeze and Grains",
+    "name": "Breeze &Grains",
     "description": "Breeze and Grains is a homestay business in Kerala. We handled their complete branding, UI, and web development to create a professional and appealing presence for guests looking for premium accommodations.",
     "team": ["Dhruval Patel - Branding", "Jeet - Development", "Harsh - Development", "Anushka - Development"],
     "date": "2025-01-01",
     "displayImage": "/assets/Bandg/display.PNG",
     "images": [
-      "/assets/Bandg/imgpng (5).JPG",
-      "/assets/Bandg/imgpng (6).PNG",
-      "/assets/Bandg/imgpng (2).jpg",
-      "/assets/Bandg/imgpng (4).JPG",
-      "/assets/Bandg/imgpng.JPG"
+      "/assets/Bandg/img1.jpg",
+      "/assets/Bandg/img6.jpg",
+      "/assets/Bandg/img3.png",
+      "/assets/Bandg/img4.png",
+      "/assets/Bandg/img5.png"
     ]
   },
   {
@@ -116,11 +116,11 @@ const projectsData = [
     "date": "2025-01-01",
     "displayImage": "/assets/Branding/Bandm/display.jpg",
     "images": [
-      "/assets/Branding/Bandm/144b679e64d331bb0ab2aa4716fc1451.jpg",
-      "/assets/Branding/Bandm/9085e6d675d66f2826e0d6a11a81e9c0.jpg",
-      "/assets/Branding/Bandm/di.jpg",
       "/assets/Branding/Bandm/img1.png",
-      "/assets/Branding/Bandm/img2.png"
+      "/assets/Branding/Bandm/img7.png",
+      "/assets/Branding/Bandm/img6.png",
+      "/assets/Branding/Bandm/img1.png",
+      "/assets/Branding/Bandm/img3.png"
     ]
   },
   {

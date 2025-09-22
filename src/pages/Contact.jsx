@@ -20,11 +20,11 @@ function Contact() {
     const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
     };
-    
+
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    
-    return () => window.removeEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   const handleFocus = (field) => setFocusedField(field);
@@ -38,14 +38,14 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.email) {
-      toast.error("Email is required", { 
+      toast.error("Email is required", {
         position: "top-center",
-        style: { 
-          borderRadius: "10px", 
-          padding: "16px", 
+        style: {
+          borderRadius: "10px",
+          padding: "16px",
           fontSize: "14px",
-          marginTop: "20px"
-        }
+          marginTop: "20px",
+        },
       });
       return;
     }
@@ -60,21 +60,24 @@ function Contact() {
       </div>,
       {
         position: "top-center",
-        style: { 
-          borderRadius: "10px", 
-          padding: "16px", 
+        style: {
+          borderRadius: "10px",
+          padding: "16px",
           fontSize: "14px",
-          marginTop: "20px"
+          marginTop: "20px",
         },
       }
     );
 
     try {
       const formDataToSend = new FormData();
-      
+
       // Add Web3Forms access key
-      formDataToSend.append("access_key", "9de0307c-9099-4652-ac76-36fe1d7ddce7");
-      
+      formDataToSend.append(
+        "access_key",
+        "9de0307c-9099-4652-ac76-36fe1d7ddce7"
+      );
+
       // Add form data from state
       formDataToSend.append("name", formData.name);
       formDataToSend.append("organisation", formData.organisation);
@@ -85,7 +88,7 @@ function Contact() {
 
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formDataToSend
+        body: formDataToSend,
       }).then((res) => res.json());
 
       toast.dismiss(spinnerToastId);
@@ -95,15 +98,15 @@ function Contact() {
           <div className="flex items-center gap-2 text-green-500">
             <Check size={20} /> Contact form sent successfully!
           </div>,
-          { 
-            position: "top-center", 
+          {
+            position: "top-center",
             duration: 4000,
-            style: { 
-              borderRadius: "10px", 
-              padding: "16px", 
+            style: {
+              borderRadius: "10px",
+              padding: "16px",
               fontSize: "14px",
-              marginTop: "20px"
-            }
+              marginTop: "20px",
+            },
           }
         );
 
@@ -120,15 +123,15 @@ function Contact() {
           <div className="flex items-center gap-2 text-red-500">
             <X size={20} /> Failed to send contact form
           </div>,
-          { 
-            position: "top-center", 
+          {
+            position: "top-center",
             duration: 4000,
-            style: { 
-              borderRadius: "10px", 
-              padding: "16px", 
+            style: {
+              borderRadius: "10px",
+              padding: "16px",
               fontSize: "14px",
-              marginTop: "20px"
-            }
+              marginTop: "20px",
+            },
           }
         );
       }
@@ -140,15 +143,15 @@ function Contact() {
         <div className="flex items-center gap-2 text-red-500">
           <X size={20} /> Failed to send contact form
         </div>,
-        { 
-          position: "top-center", 
+        {
+          position: "top-center",
           duration: 4000,
-          style: { 
-            borderRadius: "10px", 
-            padding: "16px", 
+          style: {
+            borderRadius: "10px",
+            padding: "16px",
             fontSize: "14px",
-            marginTop: "20px"
-          }
+            marginTop: "20px",
+          },
         }
       );
     } finally {
@@ -159,13 +162,13 @@ function Contact() {
   return (
     <div className="bg-[#fdfdfd] text-black min-h-screen w-full overflow-hidden">
       {/* Responsive Toaster positioning */}
-      <Toaster 
-        position="top-center" 
+      <Toaster
+        position="top-center"
         reverseOrder={false}
         containerStyle={{
-          top: isLargeScreen ? '50%' : '80px',
-          transform: isLargeScreen ? 'translateY(-50%)' : 'none',
-          zIndex: 9999
+          top: isLargeScreen ? "50%" : "80px",
+          transform: isLargeScreen ? "translateY(-50%)" : "none",
+          zIndex: 9999,
         }}
         toastOptions={{
           style: {
@@ -174,8 +177,8 @@ function Contact() {
             fontSize: "14px",
             boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
             border: "1px solid rgba(0, 0, 0, 0.1)",
-            maxWidth: '400px'
-          }
+            maxWidth: "400px",
+          },
         }}
       />
 
@@ -189,10 +192,9 @@ function Contact() {
             Contact
           </h2>
           <p className="p-2 text-[1.5vh] sm:text-[1.8vh] lg:text-[2vh] max-w-full lg:max-w-[80%] animate-fade-in-up-delay">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            architecto aspernatur ut placeat ducimus nihil at iure dolor
-            distinctio officia dicta error, ipsam vero, eius, quidem fugiat earum
-            numquam enim?
+           "Connect with our team of designers and strategists to bring your
+            vision to life.Contact us today and let’s build something amazing
+            together."
           </p>
         </div>
 
@@ -201,7 +203,10 @@ function Contact() {
           {/* First Row */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             {["name", "organisation"].map((field, i) => (
-              <div key={i} className="flex flex-col w-full sm:w-1/2 relative group">
+              <div
+                key={i}
+                className="flex flex-col w-full sm:w-1/2 relative group"
+              >
                 <label
                   className={`text-[12px] sm:text-[14px] transition-all duration-300 ${
                     focusedField === field ? "text-orange-600" : ""
@@ -225,7 +230,10 @@ function Contact() {
           {/* Second Row */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-10">
             {["email", "role"].map((field, i) => (
-              <div key={i} className="flex flex-col w-full sm:w-1/2 relative group">
+              <div
+                key={i}
+                className="flex flex-col w-full sm:w-1/2 relative group"
+              >
                 <label
                   className={`text-[12px] sm:text-[14px] transition-all duration-300 ${
                     focusedField === field ? "text-orange-600" : ""
@@ -291,7 +299,7 @@ function Contact() {
             <div className="flex items-start text-[10px] sm:text-[12px] order-2 sm:order-1">
               {/* <span className="w-4 h-4 rounded-full bg-gray-300 mr-2 cursor-pointer relative overflow-hidden group flex-shrink-0 mt-0.5"></span>
               <span> */}
-                {/* By submitting this form you accept our{" "}
+              {/* By submitting this form you accept our{" "}
                 <a href="#" className="underline ml-1">
                   T&Cs
                 </a> */}
@@ -311,7 +319,7 @@ function Contact() {
                   <span className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-black"></span>
                 )}
               </div>
-              
+
               <div className="relative overflow-hidden">
                 {loading ? (
                   <h2 className="font-[manrope3] text-3xl sm:text-5xl lg:text-7xl">
@@ -319,10 +327,10 @@ function Contact() {
                       <span
                         key={index}
                         className="inline-block transition-transform duration-300 ease-out"
-                        style={{ 
+                        style={{
                           transitionDelay: `${index * 100}ms`,
-                          transform: 'translateY(-100%)',
-                          animation: `slideDown 0.6s ease-out ${index * 100}ms forwards`
+                          transform: "translateY(-100%)",
+                          animation: `slideDown 0.6s ease-out ${index * 100}ms forwards`,
                         }}
                       >
                         {char}
@@ -335,7 +343,7 @@ function Contact() {
                   </h2>
                 )}
               </div>
-              
+
               <style jsx>{`
                 @keyframes slideDown {
                   0% {
@@ -362,8 +370,6 @@ function Contact() {
           TSC
         </span>
       </div>
-
-      
     </div>
   );
 }

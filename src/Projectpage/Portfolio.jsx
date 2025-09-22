@@ -103,7 +103,7 @@ function Portfolio() {
           ease: "none",
           scrollTrigger: {
             trigger: container,
-            start: "top top",
+            start: "top -=2%",
             end: `+=${totalScroll}`,
             scrub: 1,
             pin: true,

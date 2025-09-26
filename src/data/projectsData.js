@@ -110,7 +110,7 @@ const projectsData = [
   {
     "id": 8,
     "type": "Branding",
-    "name": "Breeze and Mist",
+    "name": "Breeze &Mist",
     "description": "Breeze and Mist is a hill resort in Kerala. We provided complete branding services to establish a distinctive visual identity and enhance the resort's presence in the hospitality market.",
     "team": ["Dhruval Patel"],
     "date": "2025-01-01",

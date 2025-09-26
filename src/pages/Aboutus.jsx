@@ -261,7 +261,8 @@ const Aboutus = () => {
                  lg:h-[20vw] h-[35vw] 
                  lg:w-[15vw] w-[25vw] 
                  -top-[20vh] 
-                 left-1/2 -translate-x-1/2  
+                 left-[30%]   /* ✅ move from center to 30% of the screen */
+                 -translate-x-1/2  
                  rounded-3xl shadow-lg z-[5]"
             >
               <img
@@ -460,7 +461,7 @@ const Aboutus = () => {
                   highlightWords={[
                     "Creative",
                     "Innovative",
-                    
+
                     "UI/UX",
                     "Website",
                     "Design",
@@ -481,7 +482,8 @@ const Aboutus = () => {
 
               <div className="text-center mt-8">
                 <p className="text-sm lg:text-base text-gray-500 ">
-                  Move your cursor or click on scrren around to interact with the falling words
+                  Move your cursor or click on scrren around to interact with
+                  the falling words
                 </p>
               </div>
             </div>

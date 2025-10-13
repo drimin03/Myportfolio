@@ -27,7 +27,7 @@ const Video = ({ onReady }) => {
   return (
     <video
       ref={videoRef}
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover filter"
       src="/videos/video.mp4"
       autoPlay
       loop

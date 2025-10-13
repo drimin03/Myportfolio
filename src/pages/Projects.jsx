@@ -1,4 +1,4 @@
-// Updated src/pages/Projects.jsx
+// Updated src/pages/Projects.jsx - WITH FILTER TABS
 import React, { useEffect, useState } from "react";
 import ProjectsCard from "../components/projects/ProjectsCard";
 import { useGSAP } from "@gsap/react";
@@ -6,24 +6,35 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Lenis from "lenis";
 import projectsData from "../data/projectsData.js";
-import Loader from "../components/Loader"; // ✅ Add Loader
-import { useRoutePreloader } from "../hooks/useCriticalImages"; // ✅ Add route preloader
+import Loader from "../components/Loader";
+import { useRoutePreloader } from "../hooks/useCriticalImages";
 
 const Projects = () => {
-  // ✅ Add loading states
+  // Loading states
   const [loading, setLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  
+  // ✅ NEW: Filter state
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // ✅ Collect all project images for preloading
+  // ✅ NEW: Get unique categories from projectsData
+  const categories = ["All", ...new Set(projectsData.map(project => project.type))];
+
+  // ✅ NEW: Filter projects based on selected category
+  const filteredProjects = selectedCategory === "All" 
+    ? projectsData 
+    : projectsData.filter(project => project.type === selectedCategory);
+
+  // Collect all project images for preloading
   const allProjectImages = projectsData.flatMap(project => [
     project.displayImage,
-    ...project.images.slice(0, 2) // Load first 2 images from each project
+    ...project.images.slice(0, 2)
   ]);
 
-  // ✅ Preload project images
+  // Preload project images
   useRoutePreloader(allProjectImages, 'high');
 
-  // ✅ Prevent scroll when loading
+  // Prevent scroll when loading
   useEffect(() => {
     if (loading) {
       document.body.style.overflow = "hidden";
@@ -36,7 +47,7 @@ const Projects = () => {
     };
   }, [loading]);
 
-  // ✅ Handle load completion
+  // Handle load completion
   const handleLoadComplete = () => {
     setLoading(false);
     setTimeout(() => {
@@ -45,19 +56,18 @@ const Projects = () => {
     }, 100);
   };
 
-  // Pair up projects for the two-card layout
+  // ✅ UPDATED: Pair up FILTERED projects for the two-card layout
   const pairedProjects = [];
-  for (let i = 0; i < projectsData.length; i += 2) {
+  for (let i = 0; i < filteredProjects.length; i += 2) {
     pairedProjects.push({
-      project1: projectsData[i],
-      project2: i + 1 < projectsData.length ? projectsData[i + 1] : null,
+      project1: filteredProjects[i],
+      project2: i + 1 < filteredProjects.length ? filteredProjects[i + 1] : null,
     });
   }
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    // ✅ Only initialize Lenis after content is shown
     if (!showContent) return;
 
     const lenis = new Lenis({
@@ -77,10 +87,9 @@ const Projects = () => {
     return () => {
       lenis.destroy();
     };
-  }, [showContent]); // ✅ Depend on showContent
+  }, [showContent]);
 
   useGSAP(() => {
-    // ✅ Only run animations after content is shown
     if (!showContent) return;
 
     if (window.innerWidth >= 1024) {
@@ -102,15 +111,24 @@ const Projects = () => {
         }
       );
     }
-  }, [showContent]); // ✅ Depend on showContent
+  }, [showContent]);
+
+  // ✅ NEW: Refresh ScrollTrigger when category changes
+  useEffect(() => {
+    if (showContent) {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    }
+  }, [selectedCategory, showContent]);
 
   return (
     <div className="min-h-screen w-full overflow-hidden">
-      {/* ✅ Loader */}
+      {/* Loader */}
       {loading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
           <Loader
-            images={allProjectImages.slice(0, 10)} // Load first 10 images for loader
+            images={allProjectImages.slice(0, 10)}
             projectName="Projects"
             projectType="Loading Projects"
             onLoadComplete={handleLoadComplete}
@@ -118,7 +136,7 @@ const Projects = () => {
         </div>
       )}
 
-      {/* ✅ Main content with fade-in */}
+      {/* Main content with fade-in */}
       <div
         className={`transition-opacity duration-1000 ${
           showContent ? "opacity-100" : "opacity-0"
@@ -132,19 +150,44 @@ const Projects = () => {
             </h2>
           </div>
 
+          {/* ✅ NEW: Filter Tabs */}
+          <div className="mt-8 mb-12 flex flex-wrap gap-3 px-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full font-[manrope4] text-sm uppercase transition-all duration-300 ${
+                  selectedCategory === category
+                    ? "bg-black text-white"
+                    : "bg-gray-200 text-black hover:bg-gray-300"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           {/* Projects Grid */}
           <div className="lg:-mt-5 lol">
-            {pairedProjects.map((pair, idx) => (
-              <div
-                key={idx}
-                className="hero w-full h-auto lg:h-[400px] mb-2 overflow-hidden"
-              >
-                <ProjectsCard 
-                  project1={pair.project1} 
-                  project2={pair.project2} 
-                />
+            {pairedProjects.length > 0 ? (
+              pairedProjects.map((pair, idx) => (
+                <div
+                  key={`${selectedCategory}-${idx}`}
+                  className="hero w-full h-auto lg:h-[400px] mb-2 overflow-hidden"
+                >
+                  <ProjectsCard 
+                    project1={pair.project1} 
+                    project2={pair.project2} 
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-20">
+                <p className="text-gray-500 text-lg font-[manrope4]">
+                  No projects found in this category.
+                </p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>

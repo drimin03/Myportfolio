@@ -86,25 +86,63 @@ function Loader({
   const [startCountUp, setStartCountUp] = useState(false);
   const [showMoveUp, setShowMoveUp] = useState(false);
   const [loadingComplete, setLoadingComplete] = useState(false);
+  const [shouldShowLoader, setShouldShowLoader] = useState(true);
+
+  // Check if any images need loading
+  useEffect(() => {
+    // If no images, don't show loader
+    if (images.length === 0) {
+      setShouldShowLoader(false);
+      setLoadingComplete(true);
+      return;
+    }
+
+    // Check if any images are not cached
+    const uncachedImages = images.filter(url => !imageCache.isImageCached(url));
+    
+    // If all images are cached, no need to show loader
+    if (uncachedImages.length === 0) {
+      setShouldShowLoader(false);
+      setLoadingComplete(true);
+    } else {
+      // Some images need loading, show loader
+      setShouldShowLoader(true);
+    }
+  }, [images]);
 
   // Prevent scrolling when loader is active
   useEffect(() => {
+    if (!shouldShowLoader) return;
+    
     document.body.style.overflow = showMoveUp ? "auto" : "hidden";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showMoveUp]);
+  }, [showMoveUp, shouldShowLoader]);
 
   // Start the CountUp animation immediately
   useEffect(() => {
+    if (!shouldShowLoader) return;
+    
     const timer = setTimeout(() => {
       setStartCountUp(true);
     }, 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [shouldShowLoader]);
 
   // Enhanced image preloading with global cache
   useEffect(() => {
+    // If we determined we don't need to show loader, call onLoadComplete immediately
+    if (!shouldShowLoader) {
+      if (onLoadComplete) {
+        setTimeout(() => {
+          setShowMoveUp(true);
+          setTimeout(onLoadComplete, 1000);
+        }, 100);
+      }
+      return;
+    }
+
     if (images.length === 0) {
       setLoadingComplete(true);
       return;
@@ -141,7 +179,7 @@ function Loader({
     };
 
     loadImages();
-  }, [images]);
+  }, [images, shouldShowLoader, onLoadComplete]);
 
   // Handle completion - wait for both CountUp and images
   const handleCountUpEnd = () => {
@@ -162,6 +200,11 @@ function Loader({
   };
 
   const loadingText = "Your experience is loading… almost there";
+
+  // If we determined we don't need to show loader, don't render the loader UI
+  if (!shouldShowLoader) {
+    return null;
+  }
 
   return (
     <div

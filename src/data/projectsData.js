@@ -154,6 +154,54 @@ const projectsData = [
       "/assets/Entice/entice3.png",
       "/assets/Entice/entice4.png"
     ]
+  },
+  {
+    "id": 11,
+    "type": "Social Media Graphics",
+    "name": "Munsey Pharmacy",
+    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
+    "team": ["Dhruval Patel"],
+    "date": "2025-01-01",
+    "displayImage": "/assets/Social Media/Munsey/image2.jpg",
+    "images": [
+      "/assets/Social Media/Munsey/image2.jpg",
+      "/assets/Social Media/Munsey/image3.jpg",
+      "/assets/Social Media/Munsey/image1.jpg",
+      
+    ]
+  },
+  {
+    "id": 12,
+    "type": "Social Media Graphics",
+    "name": "Ai Graphics",
+    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
+    "team": ["Dhruval Patel"],
+    "date": "2025-01-01",
+    "displayImage": "/assets/Social Media/Ai/image2.jpg",
+    "images": [
+      "/assets/Social Media/Ai/image2.jpg",
+      "/assets/Social Media/Ai/image3.jpg",
+      "/assets/Social Media/Ai/image4.jpg",
+      "/assets/Social Media/Ai/image5.jpg"
+      
+    ]
+  }
+  ,
+  {
+    "id": 13,
+    "type": "Social Media Graphics",
+    "name": "HealthCare",
+    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
+    "team": ["Dhruval Patel"],
+    "date": "2025-01-01",
+    "displayImage": "/assets/Social Media/HealthCare/image2.jpg",
+    "images": [
+      "/assets/Social Media/HealthCare/image2.jpg",
+      "/assets/Social Media/HealthCare/image3.jpg",
+      "/assets/Social Media/HealthCare/image4.jpg",
+      "/assets/Social Media/HealthCare/image5.jpg"
+      
+    ]
   }
 ];
 

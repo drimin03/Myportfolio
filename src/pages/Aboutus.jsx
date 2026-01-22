@@ -435,11 +435,11 @@ const Aboutus = () => {
             </Suspense>
           </div>
 
-          <div className="relative z-[10]">
+          {/* <div className="relative z-[10]">
             <Suspense fallback={<ComponentLoader />}>
               <AgencyPeople />
             </Suspense>
-          </div>
+          </div> */}
 
           <div className="relative z-[10]">
             <Suspense fallback={<ComponentLoader />}>

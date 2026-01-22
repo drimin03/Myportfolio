@@ -14,9 +14,7 @@ const Toast = ({ message, type, isVisible, onClose }) => {
     >
       <div
         className={`px-4 py-3 rounded-lg shadow-lg border backdrop-blur-sm ${
-          type === 'success'
-            ? 'bg-orange-600/90 border-orange-300 text-white'
-            : 'bg-red-900/90 border-red-600 text-red-100'
+          type === 'success' ? 'bg-orange-600/90 border-orange-300 text-white': 'bg-red-900/90 border-red-600 text-red-100'
         }`}
       >
         <div className="flex items-center justify-between">

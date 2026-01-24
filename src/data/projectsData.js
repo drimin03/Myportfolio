@@ -1,14 +1,15 @@
 // Project data export - converted from JSON for better build compatibility
 const projectsData = [
+  // ===================== APPLICATIONS =====================
   {
-    "id": 1,
-    "type": "Application [PWA]",
-    "name": "Contract App",
-    "description": "Contract App is a Progressive Web Application designed to simplify contract management for agencies and freelancers. It allows users to easily create contracts, manage client details, and obtain digital signatures, ensuring a smooth and professional workflow for client agreements.",
-    "team": ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Contractapp/display.jpg",
-    "images": [
+    id: 1,
+    type: "Application",
+    name: "Contract App",
+    description: "Contract App is a Progressive Web Application designed to simplify contract management for agencies and freelancers. It allows users to easily create contracts, manage client details, and obtain digital signatures, ensuring a smooth and professional workflow for client agreements.",
+    team: ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
+    date: "2025-01-01",
+    displayImage: "/assets/Contractapp/display.jpg",
+    images: [
       "/assets/Contractapp/Mockup1.jpg",
       "/assets/Contractapp/Mockup2.jpg",
       "/assets/Contractapp/Mockup3.jpg",
@@ -16,14 +17,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 2,
-    "type": "Application [PWA]",
-    "name": "Med Tracker",
-    "description": "Med Tracker is a family-friendly medication tracking application that helps users monitor whether family members have taken their prescribed medicines. It provides notifications, logs intake history, and ensures medication compliance for better health management.",
-    "team": ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Med/display.jpg",
-    "images": [
+    id: 2,
+    type: "Application",
+    name: "Med Tracker",
+    description: "Med Tracker is a family-friendly medication tracking application that helps users monitor whether family members have taken their prescribed medicines. It provides notifications, logs intake history, and ensures medication compliance for better health management.",
+    team: ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
+    date: "2025-01-01",
+    displayImage: "/assets/Med/display.jpg",
+    images: [
       "/assets/Med/Mockup1.jpg",
       "/assets/Med/Mockup3.jpg",
       "/assets/Med/Mockup4.jpg",
@@ -31,14 +32,46 @@ const projectsData = [
     ]
   },
   {
-    "id": 3,
-    "type": "Web Development",
-    "name": "DDF",
-    "description": "DDF is a digital marketing agency for which we developed a visually engaging website with animated UI elements. The project aimed to showcase their services dynamically and create a modern online presence.",
-    "team": ["Dhruval Patel", "Harsh", "Jeet"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/DDF/img (1).jpg",
-    "images": [
+    id: 3,
+    type: "Application",
+    name: "Friendly Faces",
+    description: "Friendly Faces is a community-driven app built for designers and developers to connect, collaborate, and grow together. It’s a space to share ideas, showcase work, get feedback, and build meaningful professional relationships.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/FF/img1.jpg",
+    images: [
+      "/assets/FF/img1.jpg",
+      "/assets/FF/img2.jpg",
+      "/assets/FF/img3.jpg",
+      "/assets/FF/img4.jpg"
+    ]
+  },
+  {
+    id: 4,
+    type: "Application",
+    name: "AI Task Manager",
+    description: "AI Task Manager is a smart productivity app that helps you stay on top of your work automatically. It creates tasks and subtasks, adds them to your calendar, and sends push notifications so you never miss a deadline.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/TM/IMG2.jpg",
+    images: [
+      "/assets/TM/IMG1.jpg",
+      "/assets/TM/IMG2.jpg",
+      "/assets/TM/IMG3.jpg",
+      "/assets/TM/IMG4.jpg"
+    ]
+  },
+
+  // ===================== WEB DEVELOPMENT / DESIGN =====================
+  {
+    id: 5,
+    type: "Web Development",
+    name: "DDF",
+    description: "DDF is a digital marketing agency for which we developed a visually engaging website with animated UI elements. The project aimed to showcase their services dynamically and create a modern online presence.",
+    team: ["Dhruval Patel", "Harsh", "Jeet"],
+    date: "2025-01-01",
+    displayImage: "/assets/DDF/img (1).jpg",
+    images: [
       "/assets/DDF/img (1).jpg",
       "/assets/DDF/img (1).png",
       "/assets/DDF/img (2).jpg",
@@ -46,14 +79,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 4,
-    "type": "Web Development",
-    "name": "Drimin",
-    "description": "Drimin is a website created to provide information about an upcoming software project by Drimin. The platform also allows users to join a waitlist, keeping them updated about the launch and project developments.",
-    "team": ["Dhruval Patel", "Vedant"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Drimin/display.jpg",
-    "images": [
+    id: 6,
+    type: "Web Development",
+    name: "Drimin",
+    description: "Drimin is a website created to provide information about an upcoming software project by Drimin. The platform also allows users to join a waitlist, keeping them updated about the launch and project developments.",
+    team: ["Dhruval Patel", "Vedant"],
+    date: "2025-01-01",
+    displayImage: "/assets/Drimin/display.jpg",
+    images: [
       "/assets/Drimin/Mockup1.jpg",
       "/assets/Drimin/Mockup2.jpg",
       "/assets/Drimin/Mockup3.jpg",
@@ -62,14 +95,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 5,
-    "type": "Web Design",
-    "name": "Tripzo",
-    "description": "Tripzo is a travel-focused website that arranges trips worldwide. The platform was designed to provide users with an intuitive and seamless experience when exploring travel options and booking trips.",
-    "team": ["Dhruval Patel", "Jeet"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Tripzo/display.jpg",
-    "images": [
+    id: 7,
+    type: "Web Design",
+    name: "Tripzo",
+    description: "Tripzo is a travel-focused website that arranges trips worldwide. The platform was designed to provide users with an intuitive and seamless experience when exploring travel options and booking trips.",
+    team: ["Dhruval Patel", "Jeet"],
+    date: "2025-01-01",
+    displayImage: "/assets/Tripzo/display.jpg",
+    images: [
       "/assets/Tripzo/tripzo1.png",
       "/assets/Tripzo/tripzo2.jpg",
       "/assets/Tripzo/tripzo3.jpg",
@@ -77,29 +110,31 @@ const projectsData = [
     ]
   },
   {
-    "id": 6,
-    "type": "Web Design",
-    "name": "Yumwynn",
-    "description": "Yumwynn is an e-commerce platform for a Canadian brand selling premium Makkhans online. The website was developed to provide an attractive and smooth online shopping experience for its customers.",
-    "team": ["Dhruval Patel", "Anushka"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Yumwinn/display.jpg",
-    "images": [
+    id: 8,
+    type: "Web Design",
+    name: "Yumwynn",
+    description: "Yumwynn is an e-commerce platform for a Canadian brand selling premium Makkhans online. The website was developed to provide an attractive and smooth online shopping experience for its customers.",
+    team: ["Dhruval Patel", "Anushka"],
+    date: "2025-01-01",
+    displayImage: "/assets/Yumwinn/display.jpg",
+    images: [
       "/assets/Yumwinn/img1.png",
       "/assets/Yumwinn/img2.png",
       "/assets/Yumwinn/img3.jpg",
       "/assets/Yumwinn/img4.jpg"
     ]
   },
+
+  // ===================== BRANDING =====================
   {
-    "id": 7,
-    "type": "Branding",
-    "name": "Breeze &Grains",
-    "description": "Breeze and Grains is a homestay business in Kerala. We handled their complete branding, UI, and web development to create a professional and appealing presence for guests looking for premium accommodations.",
-    "team": ["Dhruval Patel - Branding", "Jeet - Development", "Harsh - Development", "Anushka - Development"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Bandg/display.PNG",
-    "images": [
+    id: 9,
+    type: "Branding",
+    name: "Breeze & Grains",
+    description: "Breeze and Grains is a homestay business in Kerala. We handled their complete branding, UI, and web development to create a professional and appealing presence for guests looking for premium accommodations.",
+    team: ["Dhruval Patel - Branding", "Jeet - Development", "Harsh - Development", "Anushka - Development"],
+    date: "2025-01-01",
+    displayImage: "/assets/Bandg/display.PNG",
+    images: [
       "/assets/Bandg/img1.jpg",
       "/assets/Bandg/img6.jpg",
       "/assets/Bandg/img3.png",
@@ -108,14 +143,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 8,
-    "type": "Branding",
-    "name": "Breeze &Mist",
-    "description": "Breeze and Mist is a hill resort in Kerala. We provided complete branding services to establish a distinctive visual identity and enhance the resort's presence in the hospitality market.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Branding/Bandm/display.jpg",
-    "images": [
+    id: 10,
+    type: "Branding",
+    name: "Breeze & Mist",
+    description: "Breeze and Mist is a hill resort in Kerala. We provided complete branding services to establish a distinctive visual identity and enhance the resort's presence in the hospitality market.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/Branding/Bandm/display.jpg",
+    images: [
       "/assets/Branding/Bandm/img1.png",
       "/assets/Branding/Bandm/img7.png",
       "/assets/Branding/Bandm/img6.png",
@@ -124,14 +159,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 9,
-    "type": "Branding",
-    "name": "Corner Pizza",
-    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Cp/display.jpg",
-    "images": [
+    id: 11,
+    type: "Branding",
+    name: "Corner Pizza",
+    description: "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/Cp/display.jpg",
+    images: [
       "/assets/Cp/img2.png",
       "/assets/Cp/cp2.png",
       "/assets/Cp/img4.png",
@@ -140,14 +175,14 @@ const projectsData = [
     ]
   },
   {
-    "id": 10,
-    "type": "Branding",
-    "name": "Entice Media",
-    "description": "Entice Media is a social media marketing agency seeking a refreshed logo. We provided modern branding solutions to enhance their visual identity and create a more contemporary look.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Entice/display.jpg",
-    "images": [
+    id: 12,
+    type: "Branding",
+    name: "Entice Media",
+    description: "Entice Media is a social media marketing agency seeking a refreshed logo. We provided modern branding solutions to enhance their visual identity and create a more contemporary look.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/Entice/display.jpg",
+    images: [
       "/assets/Entice/enticemedia.png",
       "/assets/Entice/entice1.png",
       "/assets/Entice/entice2.png",
@@ -155,52 +190,35 @@ const projectsData = [
       "/assets/Entice/entice4.png"
     ]
   },
+
+  // ===================== SOCIAL MEDIA =====================
   {
-    "id": 11,
-    "type": "Social Media Graphics",
-    "name": "Munsey Pharmacy",
-    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Social Media/Munsey/image2.jpg",
-    "images": [
+    id: 13,
+    type: "Social Media Graphics",
+    name: "Munsey Pharmacy",
+    description: "We designed engaging and professional social media graphics for Munsey Pharmacy to help strengthen their online presence and communicate healthcare messages effectively.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/Social Media/Munsey/image3.jpg",
+    images: [
       "/assets/Social Media/Munsey/image2.jpg",
       "/assets/Social Media/Munsey/image3.jpg",
-      "/assets/Social Media/Munsey/image1.jpg",
-      
+      "/assets/Social Media/Munsey/image1.jpg"
     ]
   },
   {
-    "id": 12,
-    "type": "Social Media Graphics",
-    "name": "Ai Graphics",
-    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Social Media/Ai/image2.jpg",
-    "images": [
-      "/assets/Social Media/Ai/image2.jpg",
-      "/assets/Social Media/Ai/image3.jpg",
-      "/assets/Social Media/Ai/image4.jpg",
-      "/assets/Social Media/Ai/image5.jpg"
-      
-    ]
-  }
-  ,
-  {
-    "id": 13,
-    "type": "Social Media Graphics",
-    "name": "HealthCare",
-    "description": "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
-    "team": ["Dhruval Patel"],
-    "date": "2025-01-01",
-    "displayImage": "/assets/Social Media/HealthCare/image2.jpg",
-    "images": [
+    id: 14,
+    type: "Social Media Graphics",
+    name: "HealthCare",
+    description: "We created clean and informative social media creatives for a healthcare brand to promote awareness, trust, and professional communication across platforms.",
+    team: ["Dhruval Patel"],
+    date: "2025-01-01",
+    displayImage: "/assets/Social Media/HealthCare/image2.jpg",
+    images: [
       "/assets/Social Media/HealthCare/image2.jpg",
       "/assets/Social Media/HealthCare/image3.jpg",
       "/assets/Social Media/HealthCare/image4.jpg",
       "/assets/Social Media/HealthCare/image5.jpg"
-      
     ]
   }
 ];

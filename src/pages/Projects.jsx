@@ -145,7 +145,7 @@ const Projects = () => {
         <div className="p-2 mb-[20vh]">
           {/* Section Title */}
           <div className="pt-[40vh]">
-            <h2 className="font-[manrope1] text-black uppercase text-[9vw]">
+            <h2 className="font-[manrope5] text-black uppercase text-[9vw]">
               Projects
             </h2>
           </div>

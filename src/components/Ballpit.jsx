@@ -225,12 +225,16 @@ class x {
 const b = new Map(),
   A = new r();
 let R = false;
+let touchCount = 0;
+let pointerCount = 0;
 function S(e) {
   const t = {
     position: new r(),
     nPosition: new r(),
     hover: false,
     touching: false,
+    enablePointer: true,
+    enableTouch: true,
     onEnter() {},
     onMove() {},
     onClick() {},
@@ -240,34 +244,62 @@ function S(e) {
   (function(e, t) {
     if (!b.has(e)) {
       b.set(e, t);
-      if (!R) {
-        document.body.addEventListener('pointermove', M);
-        document.body.addEventListener('pointerleave', L);
-        document.body.addEventListener('click', C);
-
-        document.body.addEventListener('touchstart', TouchStart, { passive: false });
-        document.body.addEventListener('touchmove', TouchMove, { passive: false });
-        document.body.addEventListener('touchend', TouchEnd, { passive: false });
-        document.body.addEventListener('touchcancel', TouchEnd, { passive: false });
-
-        R = true;
+      if (t.enablePointer) {
+        if (!R) {
+          document.body.addEventListener('pointermove', M);
+          document.body.addEventListener('pointerleave', L);
+          document.body.addEventListener('click', C);
+          R = true;
+        }
+        pointerCount += 1;
+      }
+      if (t.enableTouch) {
+        if (touchCount === 0) {
+          document.body.addEventListener('touchstart', TouchStart, { passive: false });
+          document.body.addEventListener('touchmove', TouchMove, { passive: false });
+          document.body.addEventListener('touchend', TouchEnd, { passive: false });
+          document.body.addEventListener('touchcancel', TouchEnd, { passive: false });
+        }
+        touchCount += 1;
       }
     }
   })(e.domElement, t);
   t.dispose = () => {
     const t = e.domElement;
     b.delete(t);
+    if (t.enablePointer) {
+      pointerCount = Math.max(0, pointerCount - 1);
+      if (pointerCount === 0) {
+        document.body.removeEventListener('pointermove', M);
+        document.body.removeEventListener('pointerleave', L);
+        document.body.removeEventListener('click', C);
+        R = false;
+      }
+    }
+    if (t.enableTouch) {
+      touchCount = Math.max(0, touchCount - 1);
+      if (touchCount === 0) {
+        document.body.removeEventListener('touchstart', TouchStart);
+        document.body.removeEventListener('touchmove', TouchMove);
+        document.body.removeEventListener('touchend', TouchEnd);
+        document.body.removeEventListener('touchcancel', TouchEnd);
+      }
+    }
     if (b.size === 0) {
-      document.body.removeEventListener('pointermove', M);
-      document.body.removeEventListener('pointerleave', L);
-      document.body.removeEventListener('click', C);
-
-      document.body.removeEventListener('touchstart', TouchStart);
-      document.body.removeEventListener('touchmove', TouchMove);
-      document.body.removeEventListener('touchend', TouchEnd);
-      document.body.removeEventListener('touchcancel', TouchEnd);
-
-      R = false;
+      if (pointerCount > 0) {
+        document.body.removeEventListener('pointermove', M);
+        document.body.removeEventListener('pointerleave', L);
+        document.body.removeEventListener('click', C);
+        pointerCount = 0;
+        R = false;
+      }
+      if (touchCount > 0) {
+        document.body.removeEventListener('touchstart', TouchStart);
+        document.body.removeEventListener('touchmove', TouchMove);
+        document.body.removeEventListener('touchend', TouchEnd);
+        document.body.removeEventListener('touchcancel', TouchEnd);
+        touchCount = 0;
+      }
     }
   };
   return t;
@@ -649,6 +681,8 @@ function createBallpit(e, t = {}) {
     rendererOptions: { antialias: true, alpha: true }
   });
   let s;
+  const enableTouch = t.enableTouch ?? true;
+  const enablePointer = t.enablePointer ?? true;
   i.renderer.toneMapping = v;
   i.camera.position.set(0, 0, 20);
   i.camera.lookAt(0, 0, 0);
@@ -666,6 +700,8 @@ function createBallpit(e, t = {}) {
 
   const h = S({
     domElement: e,
+    enablePointer,
+    enableTouch,
     onMove() {
       n.setFromCamera(h.nPosition, i.camera);
       i.camera.getWorldDirection(o.normal);
@@ -710,7 +746,13 @@ function createBallpit(e, t = {}) {
   };
 }
 
-const Ballpit = ({ className = '', followCursor = true, ...props }) => {
+const Ballpit = ({
+  className = '',
+  followCursor = true,
+  enableTouch = true,
+  enablePointer = true,
+  ...props
+}) => {
   const canvasRef = useRef(null);
   const spheresInstanceRef = useRef(null);
 
@@ -718,7 +760,12 @@ const Ballpit = ({ className = '', followCursor = true, ...props }) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    spheresInstanceRef.current = createBallpit(canvas, { followCursor, ...props });
+    spheresInstanceRef.current = createBallpit(canvas, {
+      followCursor,
+      enableTouch,
+      enablePointer,
+      ...props
+    });
 
     return () => {
       if (spheresInstanceRef.current) {

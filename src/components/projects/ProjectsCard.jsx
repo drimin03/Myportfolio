@@ -15,7 +15,7 @@ const ProjectsCard = (props) => {
       {/* Project 1 */}
       <div className="w-full lg:w-1/2 flex flex-col">
         <div
-          className="relative group overflow-hidden rounded-none hover:rounded-3xl transition-all cursor-pointer"
+          className="relative group overflow-hidden rounded-2xl lg:rounded-none lg:hover:rounded-3xl transition-all cursor-pointer"
           onClick={() => navigate(`/portfolio/${props.project1?.id}`)}
         >
           <img
@@ -48,8 +48,8 @@ const ProjectsCard = (props) => {
       {/* Project 2 (conditionally render if exists) */}
       {props.project2 && (
         <div className="w-full lg:w-1/2 flex flex-col">
-          <div
-            className="relative group overflow-hidden rounded-none hover:rounded-3xl transition-all cursor-pointer"
+        <div
+          className="relative group overflow-hidden rounded-2xl lg:rounded-none lg:hover:rounded-3xl transition-all cursor-pointer"
             onClick={() => navigate(`/portfolio/${props.project2?.id}`)}
           >
             <img

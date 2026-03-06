@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [ballCount, setBallCount] = useState(120);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const getCount = () => {
@@ -17,7 +18,12 @@ const Home = () => {
       return 120;
     };
 
-    const handleResize = () => setBallCount(getCount());
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsSmallScreen(window.innerWidth <= 640);
+      }
+      setBallCount(getCount());
+    };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -38,8 +44,10 @@ const Home = () => {
           {/* Ballpit background */}
           <div className="h-screen w-screen fixed bg-black z-0 pointer-events-none">
             <Ballpit
-              className="h-full w-full"
-              followCursor
+              className="h-full w-full pointer-events-none"
+              followCursor={!isSmallScreen}
+              enableTouch={!isSmallScreen}
+              enablePointer={!isSmallScreen}
               count={ballCount}
               colors={[0xff5900, 0xff5900, 0xe9e9e9]}
               ambientIntensity={0.6}

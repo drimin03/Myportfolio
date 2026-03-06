@@ -7,29 +7,28 @@ const HomeBottomtxt = () => {
       <Link 
         to='/projects' 
         className='text-[6vw] sm:text-[4vw] md:text-[3vw] lg:text-[5vw] xl:text-[4vw] 
-                   hover:border-orange-400 hover:text-orange-400 
-                   leading-tight py-1 sm:py-1 lg:py-1 
-                   border-2 border-white rounded-full 
-                   px-6 sm:px-8 lg:px-10 
-                   uppercase 
-                   transition-all duration-300 
-                   min-w-fit
-                   text-center
-                   flex-shrink-0'>
+                   leading-tight py-2 sm:py-2 lg:py-2 
+                   /* Glass Effect Classes Below */
+                   bg-white/10 backdrop-blur-md
+                   rounded-full px-6 sm:px-8 lg:px-10 
+                   uppercase transition-all duration-300 
+                   min-w-fit text-center flex-shrink-0
+                   text-white hover:text-orange-800 hover:bg-white/20 
+                   shadow-lg'>
         Projects
       </Link>
+      
       <Link 
         to='/aboutus' 
         className='text-[6vw] sm:text-[4vw] md:text-[3vw] lg:text-[5vw] xl:text-[4vw] 
-                   hover:border-orange-400 hover:text-orange-400 
-                   leading-tight py-1 sm:py-1 lg:py-1 
-                   border-2 border-white rounded-full 
-                   px-6 sm:px-8 lg:px-10 
-                   uppercase 
-                   transition-all duration-300 
-                   min-w-fit
-                   text-center
-                   flex-shrink-0'>
+                   leading-tight py-2 sm:py-2 lg:py-2 
+                   /* Glass Effect Classes Below */
+                   bg-white/10 backdrop-blur-md
+                   rounded-full px-6 sm:px-8 lg:px-10 
+                   uppercase transition-all duration-300 
+                   min-w-fit text-center flex-shrink-0
+                   text-white hover:text-orange-800 hover:bg-white/20 
+                   shadow-lg'>
         About
       </Link>
     </div>

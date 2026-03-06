@@ -176,8 +176,8 @@ const Footer = () => {
             </p>
             <div>
               <p className="font-[manrope5] uppercase">New Business:</p>
-              <a href="mailto:drimindesign@gmail.com" className="hover:underline">
-                drimindesign@gmail.com
+              <a href="mailto:info@drimindesign.in" className="hover:underline">
+                info@drimindesign.in
               </a>
             </div>
             <div>
@@ -245,8 +245,8 @@ const Footer = () => {
         {/* Bottom row */}
         <div className="flex justify-between text-sm border-t border-gray-700 pt-6 relative z-10">
           <div>
-            <p>Maharashtra—India</p>
-            <p>PUNE</p>
+            <p>India</p>
+            
           </div>
           <p>Terms of use ©2025</p>
         </div>

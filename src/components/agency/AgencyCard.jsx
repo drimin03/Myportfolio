@@ -140,7 +140,7 @@ const AgencyCard = () => {
         style={{ willChange: 'opacity, transform' }}
       >
         <h2 className="title text-xl sm:text-2xl lg:text-4xl mb-1 sm:mb-2 leading-tight">KRUPA.A.PATEL</h2>
-        <p className="designation uppercase text-xs sm:text-sm lg:text-base font-light opacity-70">App Developer</p>
+        <p className="designation uppercase text-xs sm:text-sm lg:text-base font-light opacity-70">Developer</p>
       </div>
 
       {/* Bottom Right Text - Moved further down on small screens, unchanged on large screens */}
@@ -150,7 +150,7 @@ const AgencyCard = () => {
         style={{ willChange: 'opacity, transform' }}
       >
         <h2 className="title text-xl sm:text-2xl lg:text-4xl mb-1 sm:mb-2 leading-tight">DHRUVAL.A.PATEL</h2>
-        <p className="designation uppercase text-xs sm:text-sm lg:text-base opacity-70">UI Designer / Founder</p>
+        <p className="designation uppercase text-xs sm:text-sm lg:text-base opacity-70">UI/UXDesigner</p>
       </div>
 
       {/* Card Container (pinned) - Better spacing and positioning for mobile */}
@@ -179,7 +179,7 @@ const AgencyCard = () => {
           style={{ willChange: 'transform' }}
         >
           <img
-            src="/assets/Team/imagenew.jpg"
+            src="/assets/Team/founder.png"
             alt="Card 2"
             className="w-full h-full object-cover"
           />

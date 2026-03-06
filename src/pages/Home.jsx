@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Video from "../components/home/Video";
+import Ballpit from "../components/Ballpit";
 import HomeHerotxt from "../components/home/HomeHerotxt";
 import HomeBottomtxt from "../components/home/HomeBottomtxt";
 import Loader from "../components/Loader";
@@ -11,16 +11,30 @@ const Home = () => {
     <>
       {!isLoaded && (
         <Loader
-          images={["/videos/video.mp4"]} // video preloaded by loader
+          videos={["/videos/video.mp4"]}
+          minDurationMs={5000}
           onLoadComplete={() => setIsLoaded(true)}
         />
       )}
 
       {isLoaded && (
         <div className="relative">
-          {/* Background video */}
+          {/* Ballpit background */}
           <div className="h-screen w-screen fixed bg-black z-0">
-            <Video onReady={() => setIsLoaded(true)} />
+            <Ballpit
+              className="h-full w-full"
+              followCursor
+              count={120}
+              colors={[0xff5900, 0xff5900, 0xe9e9e9]}
+              ambientIntensity={0.6}
+              lightIntensity={110}
+              materialParams={{
+                metalness: 0.15,
+                roughness: 0.35,
+                clearcoat: 1,
+                clearcoatRoughness: 0.2
+              }}
+            />
           </div>
 
           {/* Content Layer */}

@@ -1,76 +1,73 @@
 import { useState, useEffect, useRef } from "react";
-import { useInView, useMotionValue, useSpring } from 'motion/react';
+import { useInView } from 'motion/react';
 import imageCache from '../utils/ImageCache';
 
-// CountUp Component
-function CountUp({
-  to,
-  from = 0,
-  direction = 'up',
+const SCRAMBLE_CHARS = "!<>-_\\/[]{}-=+*^?#________";
+
+// ScrambleText Component
+function ScrambleText({
+  text,
   delay = 0,
-  duration = 2,
+  duration = 1.6,
   className = '',
   startWhen = true,
-  separator = '',
   onStart,
   onEnd
 }) {
   const ref = useRef(null);
-  const motionValue = useMotionValue(direction === 'down' ? to : from);
-  const damping = 20 + 40 * (1 / duration);
-  const stiffness = 100 * (1 / duration);
-  const springValue = useSpring(motionValue, { damping, stiffness });
   const isInView = useInView(ref, { once: true, margin: '0px' });
-
-  const getDecimalPlaces = num => {
-    const str = num.toString();
-    if (str.includes('.')) {
-      const decimals = str.split('.')[1];
-      if (parseInt(decimals) !== 0) {
-        return decimals.length;
-      }
-    }
-    return 0;
-  };
-  const maxDecimals = Math.max(getDecimalPlaces(from), getDecimalPlaces(to));
 
   useEffect(() => {
     if (ref.current) {
-      ref.current.textContent = String(direction === 'down' ? to : from);
+      ref.current.textContent = text || '';
     }
-  }, [from, to, direction]);
+  }, [text]);
 
   useEffect(() => {
-    if (isInView && startWhen) {
-      if (typeof onStart === 'function') onStart();
-      const timeoutId = setTimeout(() => {
-        motionValue.set(direction === 'down' ? from : to);
-      }, delay * 1000);
-      const durationTimeoutId = setTimeout(() => {
+    if (!isInView || !startWhen || !ref.current) return;
+
+    let frameId = null;
+    let startAt = null;
+    let timeoutId = null;
+    const targetText = text || '';
+    const textLength = targetText.length;
+
+    if (typeof onStart === 'function') onStart();
+
+    const animate = (timestamp) => {
+      if (!startAt) startAt = timestamp;
+      const elapsed = (timestamp - startAt) / 1000;
+      const progress = Math.min(elapsed / duration, 1);
+      const revealCount = Math.floor(progress * textLength);
+
+      const output = targetText
+        .split("")
+        .map((char, index) => {
+          if (char === " ") return " ";
+          if (index < revealCount) return char;
+          return SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+        })
+        .join("");
+
+      if (ref.current) ref.current.textContent = output;
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(animate);
+      } else {
+        if (ref.current) ref.current.textContent = targetText;
         if (typeof onEnd === 'function') onEnd();
-      }, delay * 1000 + duration * 1000);
-      return () => {
-        clearTimeout(timeoutId);
-        clearTimeout(durationTimeoutId);
-      };
-    }
-  }, [isInView, startWhen, motionValue, direction, from, to, delay, onStart, onEnd, duration]);
-
-  useEffect(() => {
-    const unsubscribe = springValue.on('change', latest => {
-      if (ref.current) {
-        const hasDecimals = maxDecimals > 0;
-        const options = {
-          useGrouping: !!separator,
-          minimumFractionDigits: hasDecimals ? maxDecimals : 0,
-          maximumFractionDigits: hasDecimals ? maxDecimals : 0
-        };
-        const formattedNumber = Intl.NumberFormat('en-US', options).format(latest);
-        ref.current.textContent = separator ? formattedNumber.replace(/,/g, separator) : formattedNumber;
       }
-    });
-    return () => unsubscribe();
-  }, [springValue, separator, maxDecimals]);
+    };
+
+    timeoutId = setTimeout(() => {
+      frameId = requestAnimationFrame(animate);
+    }, delay * 1000);
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      if (frameId) cancelAnimationFrame(frameId);
+    };
+  }, [isInView, startWhen, delay, duration, onStart, onEnd, text]);
 
   return <span className={className} ref={ref} />;
 }
@@ -120,7 +117,7 @@ function Loader({
     };
   }, [showMoveUp, shouldShowLoader]);
 
-  // Start the CountUp animation immediately
+  // Start the scramble animation immediately
   useEffect(() => {
     if (!shouldShowLoader) return;
     
@@ -181,7 +178,7 @@ function Loader({
     loadImages();
   }, [images, shouldShowLoader, onLoadComplete]);
 
-  // Handle completion - wait for both CountUp and images
+  // Handle completion - wait for both scramble and images
   const handleCountUpEnd = () => {
     const checkCompletion = () => {
       if (loadingComplete) {
@@ -199,7 +196,8 @@ function Loader({
     checkCompletion();
   };
 
-  const loadingText = "Your experience is loading… almost there";
+  const loadingText = "Your experience is loading... almost there";
+  const scrambleText = `${projectName} ${projectType}`.trim();
 
   // If we determined we don't need to show loader, don't render the loader UI
   if (!shouldShowLoader) {
@@ -212,15 +210,14 @@ function Loader({
         showMoveUp ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      {/* Loading Progress Counter */}
+      {/* Scramble Loading Text */}
       <div className="pb-4">
         <div className="text-center">
-          <CountUp
-            from={0}
-            to={100}
-            duration={2}
+          <ScrambleText
+            text={scrambleText}
+            duration={1.6}
             startWhen={startCountUp}
-            className="font-[manrope4] text-8xl md:text-8xl font-bold text-white"
+            className="font-[manrope4] text-lg md:text-xl text-white"
             onEnd={handleCountUpEnd}
           />
         </div>
@@ -248,3 +245,5 @@ function Loader({
 }
 
 export default Loader;
+
+

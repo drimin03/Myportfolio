@@ -38,12 +38,12 @@ const Aboutus = () => {
 
   const imageArray = useMemo(
     () => [
-      "/assets/Team/imagenew.jpg",
+      "/assets/Team/founder.png",
       "/assets/Team/image1.jpg",
       "/assets/Team/team3.jpg",
-      "/assets/Team/team4.jpg",
+      // "/assets/Team/team4.jpg",
       "/assets/Team/team5.jpg",
-      "/assets/Team/team6.jpg",
+      
     ],
     []
   );
@@ -258,8 +258,8 @@ const Aboutus = () => {
             <div
               ref={imageDivRef}
               className="absolute overflow-hidden 
-                 lg:h-[20vw] h-[35vw] 
-                 lg:w-[15vw] w-[25vw] 
+                 lg:h-[30vw] h-[35vw] 
+                 lg:w-[20vw] w-[25vw] 
                  -top-[20vh] 
                  left-[30%]   /* ✅ move from center to 30% of the screen */
                  -translate-x-1/2  
@@ -276,9 +276,9 @@ const Aboutus = () => {
               />
             </div>
 
-            <div className="relative font-[manrope1] z-[10]">
+            <div className="relative font-[manrope1] z-[50]">
               <div className="mt-[55vh] relative z-[15]">
-                <h1 className="text-[19vw] uppercase leading-[15vw] text-center text-transition relative z-[20]">
+                <h1 className="text-[19vw]  uppercase leading-[15vw] text-center text-transition relative z-[20]">
                   Behind
                   <br />
                   the Work

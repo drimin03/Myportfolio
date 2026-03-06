@@ -37,12 +37,13 @@ const Stairs = (props) => {
       tl.to(".stair", {
         y: "0%",
       });
-      gsap.from(pageRef.current, {
-         opacity: 0,
-         delay:1,
-         scale:1.5,
-
+      if (!document.body.classList.contains("is-loading")) {
+        gsap.from(pageRef.current, {
+          opacity: 0,
+          delay: 1,
+          scale: 1.5,
         });
+      }
     },
     [currentPath]
   );

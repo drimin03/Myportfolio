@@ -4,7 +4,7 @@ import imageCache from '../utils/ImageCache';
 import projectsData from '../data/projectsData.js';
 
 // Define critical images that should load immediately when app starts
-const CRITICAL_IMAGES = [
+export const CRITICAL_IMAGES = [
   // About page hero images
   '/assets/Team/imagenew.jpg',
   '/assets/Team/image1.jpg',

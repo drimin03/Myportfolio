@@ -8,12 +8,12 @@ const projectsData = [
     description: "Contract App is a Progressive Web Application designed to simplify contract management for agencies and freelancers. It allows users to easily create contracts, manage client details, and obtain digital signatures, ensuring a smooth and professional workflow for client agreements.",
     team: ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
     date: "2025-01-01",
-    displayImage: "/assets/Contractapp/display.jpg",
+    displayImage: "/assets/Contractapp/display.avif",
     images: [
-      "/assets/Contractapp/Mockup1.jpg",
-      "/assets/Contractapp/Mockup2.jpg",
-      "/assets/Contractapp/Mockup3.jpg",
-      "/assets/Contractapp/Mockup4.jpg"
+      "/assets/Contractapp/Mockup1.avif",
+      "/assets/Contractapp/Mockup2.avif",
+      "/assets/Contractapp/Mockup3.avif",
+      "/assets/Contractapp/Mockup4.avif"
     ]
   },
   {
@@ -23,12 +23,12 @@ const projectsData = [
     description: "Med Tracker is a family-friendly medication tracking application that helps users monitor whether family members have taken their prescribed medicines. It provides notifications, logs intake history, and ensures medication compliance for better health management.",
     team: ["Dhruval Patel - Design", "Krupa - Development", "Vedant - Development", "Ayush - Deployment"],
     date: "2025-01-01",
-    displayImage: "/assets/Med/display.jpg",
+    displayImage: "/assets/Med/display.avif",
     images: [
-      "/assets/Med/Mockup1.jpg",
-      "/assets/Med/Mockup3.jpg",
-      "/assets/Med/Mockup4.jpg",
-      "/assets/Med/Mockup5.jpg"
+      "/assets/Med/Mockup1.avif",
+      "/assets/Med/Mockup3.avif",
+      "/assets/Med/Mockup4.avif",
+      "/assets/Med/Mockup5.avif"
     ]
   },
   {
@@ -38,12 +38,12 @@ const projectsData = [
     description: "Friendly Faces is a community-driven app built for designers and developers to connect, collaborate, and grow together. It’s a space to share ideas, showcase work, get feedback, and build meaningful professional relationships.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/FF/img1.jpg",
+    displayImage: "/assets/FF/img1.avif",
     images: [
-      "/assets/FF/img1.jpg",
-      "/assets/FF/img2.jpg",
-      "/assets/FF/img3.jpg",
-      "/assets/FF/img4.jpg"
+      "/assets/FF/img1.avif",
+      "/assets/FF/img2.avif",
+      "/assets/FF/img3.avif",
+      "/assets/FF/img4.avif"
     ]
   },
   {
@@ -53,12 +53,12 @@ const projectsData = [
     description: "AI Task Manager is a smart productivity app that helps you stay on top of your work automatically. It creates tasks and subtasks, adds them to your calendar, and sends push notifications so you never miss a deadline.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/TM/IMG2.jpg",
+    displayImage: "/assets/TM/IMG2.avif",
     images: [
-      "/assets/TM/IMG1.jpg",
-      "/assets/TM/IMG2.jpg",
-      "/assets/TM/IMG3.jpg",
-      "/assets/TM/IMG4.jpg"
+      "/assets/TM/IMG1.avif",
+      "/assets/TM/IMG2.avif",
+      "/assets/TM/IMG3.avif",
+      "/assets/TM/IMG4.avif"
     ]
   },
 
@@ -70,12 +70,12 @@ const projectsData = [
     description: "DDF is a digital marketing agency for which we developed a visually engaging website with animated UI elements. The project aimed to showcase their services dynamically and create a modern online presence.",
     team: ["Dhruval Patel", "Harsh", "Jeet"],
     date: "2025-01-01",
-    displayImage: "/assets/DDF/img (1).jpg",
+    displayImage: "/assets/DDF/img (1).avif",
     images: [
-      "/assets/DDF/img (1).jpg",
-      "/assets/DDF/img (1).png",
-      "/assets/DDF/img (2).jpg",
-      "/assets/DDF/img (3).jpg"
+      "/assets/DDF/img (1).avif",
+      "/assets/DDF/img (1).avif",
+      "/assets/DDF/img (2).avif",
+      "/assets/DDF/img (3).avif"
     ]
   },
   {
@@ -85,13 +85,13 @@ const projectsData = [
     description: "Drimin is a website created to provide information about an upcoming software project by Drimin. The platform also allows users to join a waitlist, keeping them updated about the launch and project developments.",
     team: ["Dhruval Patel", "Vedant"],
     date: "2025-01-01",
-    displayImage: "/assets/Drimin/display.jpg",
+    displayImage: "/assets/Drimin/display.avif",
     images: [
-      "/assets/Drimin/Mockup1.jpg",
-      "/assets/Drimin/Mockup2.jpg",
-      "/assets/Drimin/Mockup3.jpg",
-      "/assets/Drimin/Mockup4.jpg",
-      "/assets/Drimin/Mockup5.jpg"
+      "/assets/Drimin/Mockup1.avif",
+      "/assets/Drimin/Mockup2.avif",
+      "/assets/Drimin/Mockup3.avif",
+      "/assets/Drimin/Mockup4.avif",
+      "/assets/Drimin/Mockup5.avif"
     ]
   },
   {
@@ -101,12 +101,12 @@ const projectsData = [
     description: "Tripzo is a travel-focused website that arranges trips worldwide. The platform was designed to provide users with an intuitive and seamless experience when exploring travel options and booking trips.",
     team: ["Dhruval Patel", "Jeet"],
     date: "2025-01-01",
-    displayImage: "/assets/Tripzo/display.jpg",
+    displayImage: "/assets/Tripzo/display.avif",
     images: [
-      "/assets/Tripzo/tripzo1.png",
-      "/assets/Tripzo/tripzo2.jpg",
-      "/assets/Tripzo/tripzo3.jpg",
-      "/assets/Tripzo/tripzo4.png"
+      "/assets/Tripzo/tripzo1.avif",
+      "/assets/Tripzo/tripzo2.avif",
+      "/assets/Tripzo/tripzo3.avif",
+      "/assets/Tripzo/tripzo4.avif"
     ]
   },
   {
@@ -116,12 +116,12 @@ const projectsData = [
     description: "Yumwynn is an e-commerce platform for a Canadian brand selling premium Makkhans online. The website was developed to provide an attractive and smooth online shopping experience for its customers.",
     team: ["Dhruval Patel", "Anushka"],
     date: "2025-01-01",
-    displayImage: "/assets/Yumwinn/display.jpg",
+    displayImage: "/assets/Yumwinn/display.avif",
     images: [
-      "/assets/Yumwinn/img1.png",
-      "/assets/Yumwinn/img2.png",
-      "/assets/Yumwinn/img3.jpg",
-      "/assets/Yumwinn/img4.jpg"
+      "/assets/Yumwinn/img1.avif",
+      "/assets/Yumwinn/img2.avif",
+      "/assets/Yumwinn/img3.avif",
+      "/assets/Yumwinn/img4.avif"
     ]
   },
 
@@ -133,13 +133,13 @@ const projectsData = [
     description: "Breeze and Grains is a homestay business in Kerala. We handled their complete branding, UI, and web development to create a professional and appealing presence for guests looking for premium accommodations.",
     team: ["Dhruval Patel - Branding", "Jeet - Development", "Harsh - Development", "Anushka - Development"],
     date: "2025-01-01",
-    displayImage: "/assets/Bandg/display.PNG",
+    displayImage: "/assets/Bandg/display.avif",
     images: [
-      "/assets/Bandg/img1.jpg",
-      "/assets/Bandg/img6.jpg",
-      "/assets/Bandg/img3.png",
-      "/assets/Bandg/img4.png",
-      "/assets/Bandg/img5.png"
+      "/assets/Bandg/display.avif",
+      "/assets/Bandg/img6.avif",
+      "/assets/Bandg/img3.avif",
+      "/assets/Bandg/img4.avif",
+      "/assets/Bandg/img5.avif"
     ]
   },
   {
@@ -149,13 +149,13 @@ const projectsData = [
     description: "Breeze and Mist is a hill resort in Kerala. We provided complete branding services to establish a distinctive visual identity and enhance the resort's presence in the hospitality market.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/Branding/Bandm/display.jpg",
+    displayImage: "/assets/Branding/Bandm/display.avif",
     images: [
-      "/assets/Branding/Bandm/img1.png",
-      "/assets/Branding/Bandm/img7.png",
-      "/assets/Branding/Bandm/img6.png",
-      "/assets/Branding/Bandm/img1.png",
-      "/assets/Branding/Bandm/img3.png"
+      "/assets/Branding/Bandm/img1.avif",
+      "/assets/Branding/Bandm/img7.avif",
+      "/assets/Branding/Bandm/img6.avif",
+      "/assets/Branding/Bandm/img1.avif",
+      "/assets/Branding/Bandm/img3.avif"
     ]
   },
   {
@@ -165,13 +165,13 @@ const projectsData = [
     description: "Corner Pizza is a cloud kitchen based in Canada. We provided complete branding services to establish a professional and appealing identity for their food delivery business.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/Cp/display.jpg",
+    displayImage: "/assets/Cp/display.avif",
     images: [
-      "/assets/Cp/img2.png",
-      "/assets/Cp/cp2.png",
-      "/assets/Cp/img4.png",
-      "/assets/Cp/img5.png",
-      "/assets/Cp/img3.png"
+      "/assets/Cp/img2.avif",
+      "/assets/Cp/cp2.avif",
+      "/assets/Cp/img4.avif",
+      "/assets/Cp/img5.avif",
+      "/assets/Cp/img3.avif"
     ]
   },
   {
@@ -181,44 +181,128 @@ const projectsData = [
     description: "Entice Media is a social media marketing agency seeking a refreshed logo. We provided modern branding solutions to enhance their visual identity and create a more contemporary look.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/Entice/display.jpg",
+    displayImage: "/assets/Entice/display.avif",
     images: [
-      "/assets/Entice/enticemedia.png",
-      "/assets/Entice/entice1.png",
-      "/assets/Entice/entice2.png",
-      "/assets/Entice/entice3.png",
-      "/assets/Entice/entice4.png"
+      "/assets/Entice/enticemedia.avif",
+      "/assets/Entice/entice1.avif",
+      "/assets/Entice/entice2.avif",
+      "/assets/Entice/entice3.avif",
+      "/assets/Entice/entice4.avif"
+    ]
+  },
+  {
+    id: 13,
+    type: "Branding",
+    name: "Logo Design Collection",
+    description: "A curated set of logo explorations and final marks created for various clients, focused on clean typography and versatile brand marks.",
+    team: ["Dhruval Patel"],
+    date: "2026-03-07",
+    displayImage: "/assets/logodesign/image1.avif",
+    images: [
+      "/assets/logodesign/image1.avif",
+      "/assets/logodesign/image2.avif",
+      "/assets/logodesign/image3.avif",
+      "/assets/logodesign/image6.avif"
+    ]
+  },
+  {
+    id: 14,
+    type: "Branding",
+    name: "Packaging Design Collection",
+    description: "Packaging concepts and final designs created to elevate shelf presence and reinforce brand storytelling through bold visual systems.",
+    team: ["Dhruval Patel"],
+    date: "2026-03-07",
+    displayImage: "/assets/packaging/image1.avif",
+    images: [
+      "/assets/packaging/image1.avif",
+      "/assets/packaging/image2.avif",
+      "/assets/packaging/image3.avif",
+      "/assets/packaging/image4.avif",
+      "/assets/packaging/image5.avif",
+      "/assets/packaging/image6.avif"
     ]
   },
 
   // ===================== SOCIAL MEDIA =====================
   {
-    id: 13,
+    id: 15,
     type: "Social Media Graphics",
     name: "Munsey Pharmacy",
     description: "We designed engaging and professional social media graphics for Munsey Pharmacy to help strengthen their online presence and communicate healthcare messages effectively.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/Social Media/Munsey/image3.jpg",
+    displayImage: "/assets/Social Media/Munsey/image3.avif",
     images: [
-      "/assets/Social Media/Munsey/image2.jpg",
-      "/assets/Social Media/Munsey/image3.jpg",
-      "/assets/Social Media/Munsey/image1.jpg"
+      "/assets/Social Media/Munsey/image2.avif",
+      "/assets/Social Media/Munsey/image3.avif",
+      "/assets/Social Media/Munsey/image1.avif"
     ]
   },
   {
-    id: 14,
+    id: 16,
     type: "Social Media Graphics",
     name: "HealthCare",
     description: "We created clean and informative social media creatives for a healthcare brand to promote awareness, trust, and professional communication across platforms.",
     team: ["Dhruval Patel"],
     date: "2025-01-01",
-    displayImage: "/assets/Social Media/HealthCare/image2.jpg",
+    displayImage: "/assets/Social Media/HealthCare/image2.avif",
     images: [
-      "/assets/Social Media/HealthCare/image2.jpg",
-      "/assets/Social Media/HealthCare/image3.jpg",
-      "/assets/Social Media/HealthCare/image4.jpg",
-      "/assets/Social Media/HealthCare/image5.jpg"
+      "/assets/Social Media/HealthCare/image2.avif",
+      "/assets/Social Media/HealthCare/image3.avif",
+      "/assets/Social Media/HealthCare/image4.avif",
+      "/assets/Social Media/HealthCare/image5.avif"
+    ]
+  },
+  {
+    id: 17,
+    type: "Social Media Graphics",
+    name: "AI Creatives",
+    description: "A social media creative series centered on AI-themed visuals, built to drive engagement with bold layouts and modern typography.",
+    team: ["Dhruval Patel"],
+    date: "2026-03-07",
+    displayImage: "/assets/Social Media/Ai/image1.avif",
+    images: [
+      "/assets/Social Media/Ai/image1.avif",
+      "/assets/Social Media/Ai/image2.avif",
+      "/assets/Social Media/Ai/image3.avif",
+      "/assets/Social Media/Ai/image5.avif",
+      "/assets/Social Media/Ai/image6.avif"
+    ]
+  },
+  {
+    id: 18,
+    type: "Social Media Graphics",
+    name: "House of K",
+    description: "Social media posts designed for House of K, focusing on premium visual storytelling and brand consistency across posts.",
+    team: ["Dhruval Patel", "Brand Diaries - Collaboration"],
+    date: "2026-03-07",
+    displayImage: "/assets/Social Media/house of k/image1.avif",
+    images: [
+      "/assets/Social Media/house of k/image1.avif",
+      "/assets/Social Media/house of k/image2.avif",
+      "/assets/Social Media/house of k/image3.avif",
+      "/assets/Social Media/house of k/image4.avif",
+      "/assets/Social Media/house of k/image5.avif",
+      "/assets/Social Media/house of k/image6.avif"
+    ]
+  },
+
+  // ===================== WEB APPLICATIONS =====================
+  {
+    id: 19,
+    type: "Web Development",
+    name: "Tulsi Admin",
+    description: "An admin dashboard experience for Tulsi, designed to streamline management workflows with a clean, task-focused UI.",
+    team: ["Dhruval Patel"],
+    date: "2026-02-18",
+    displayImage: "/assets/Tulsi/admin/Screenshot_1.avif",
+    images: [
+      "/assets/Tulsi/admin/Screenshot_1.avif",
+      "/assets/Tulsi/admin/Screenshot_2.avif",
+      "/assets/Tulsi/admin/Screenshot_3.avif",
+      "/assets/Tulsi/admin/Screenshot_4.avif",
+      "/assets/Tulsi/admin/Screenshot_5.avif",
+      "/assets/Tulsi/admin/Screenshot_6.avif"
     ]
   }
 ];

@@ -8,7 +8,8 @@
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"build:registry": "jsrepo build"
+		"build:registry": "jsrepo build",
+		"convert:avif": "node tools/convert-png-to-avif.mjs"
 	},
 	"dependencies": {
 		"@gsap/react": "^2.1.2",
@@ -44,6 +45,7 @@
 		"react-laser-beam": "^1.3.5",
 		"react-router-dom": "^6.30.1",
 		"react-toastify": "^11.0.5",
+		"sharp": "^0.34.5",
 		"tailwind-merge": "^3.4.0",
 		"tailwindcss": "^4.1.12",
 		"tailwindcss-animate": "^1.0.7",

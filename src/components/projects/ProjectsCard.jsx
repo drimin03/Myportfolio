@@ -26,7 +26,7 @@ const ProjectsCard = (props) => {
 
           {/* Overlay text for large screens */}
           <div className="hidden lg:flex opacity-0 group-hover:opacity-100 transition-all absolute top-0 left-0 w-full h-full bg-black/60 items-end justify-between p-6">
-            <h2 className="text-xl font-[manrope4] text-white">
+            <h2 className="text-lg font-[manrope4] text-white">
               {props.project1?.name || "Project"}
             </h2>
             <span className="text-black text-sm font-[manrope4] uppercase bg-white px-3 py-1 rounded-full absolute top-6 right-6">
@@ -40,7 +40,7 @@ const ProjectsCard = (props) => {
 
         {/* Always visible text on small screens */}
         <div className="block text-black uppercase lg:hidden bg-white p-3 mt-2 shadow">
-          <h2 className="text-lg font-semibold">{props.project1?.name || "Project"}</h2>
+          <h2 className="text-base font-semibold">{props.project1?.name || "Project"}</h2>
           <p className="text-sm text-gray-500">{formatDate(props.project1?.date)}</p>
         </div>
       </div>
@@ -60,7 +60,7 @@ const ProjectsCard = (props) => {
 
             {/* Overlay text for large screens */}
             <div className="hidden lg:flex opacity-0 group-hover:opacity-100 transition-all absolute top-0 left-0 w-full h-full bg-black/60 items-end justify-between p-6">
-              <h2 className="text-xl font-[manrope4] text-white">
+              <h2 className="text-lg font-[manrope4] text-white">
                 {props.project2?.name || "Project"}
               </h2>
               <span className="text-black text-sm font-[manrope4] uppercase bg-white px-3 py-1 rounded-full absolute top-6 right-6">
@@ -74,7 +74,7 @@ const ProjectsCard = (props) => {
 
           {/* Always visible text on small screens */}
           <div className="block text-black uppercase lg:hidden bg-white p-3 mt-2 shadow">
-            <h2 className="text-lg font-semibold">{props.project2?.name || "Project"}</h2>
+            <h2 className="text-base font-semibold">{props.project2?.name || "Project"}</h2>
             <p className="text-sm text-gray-500">{formatDate(props.project2?.date)}</p>
           </div>
         </div>

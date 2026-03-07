@@ -145,16 +145,11 @@ function Portfolio() {
         {/* INTRO SECTION */}
         <div className="mt-50 relative flex gap-3 px-6 md:px-10 h-[40vh] md:h-[50vh] bg-gray-100">
           <div className="flex flex-col justify-end items-start h-full w-full md:w-1/2 relative pb-6">
-            <label className="font-[manrope4] text-[4vh] md:text-[6vh]">
+            <label className="font-[manrope4] text-[2.2vh] md:text-[3vh]">
               {project.type}
             </label>
-            <h2 className="font-[manrope5] uppercase text-[12vw] md:text-[13vw] tracking-tight leading-none whitespace-nowrap">
-              {project.name.split(" ").map((word, i) => (
-                <React.Fragment key={i}>
-                  {word}
-                  <br />
-                </React.Fragment>
-              ))}
+            <h2 className="font-[manrope5] uppercase text-[9.5vw] md:text-[7.5vw] tracking-tight leading-none whitespace-nowrap">
+              {project.name}
             </h2>
           </div>
         </div>

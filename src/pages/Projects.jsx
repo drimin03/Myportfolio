@@ -6,12 +6,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Lenis from "lenis";
 import projectsData from "../data/projectsData.js";
-import Loader from "../components/Loader";
 import { useRoutePreloader } from "../hooks/useCriticalImages";
 
 const Projects = () => {
-  // Loading states
-  const [loading, setLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
   
   // ✅ NEW: Filter state
@@ -34,27 +31,12 @@ const Projects = () => {
   // Preload project images
   useRoutePreloader(allProjectImages, 'high');
 
-  // Prevent scroll when loading
   useEffect(() => {
-    if (loading) {
-      document.body.style.overflow = "hidden";
-      window.scrollTo(0, 0);
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [loading]);
-
-  // Handle load completion
-  const handleLoadComplete = () => {
-    setLoading(false);
     setTimeout(() => {
       setShowContent(true);
       ScrollTrigger.refresh();
     }, 100);
-  };
+  }, []);
 
   // ✅ UPDATED: Pair up FILTERED projects for the two-card layout
   const pairedProjects = [];
@@ -124,18 +106,6 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen w-full overflow-hidden">
-      {/* Loader */}
-      {loading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-          <Loader
-            images={allProjectImages.slice(0, 10)}
-            projectName="Projects"
-            projectType="Loading Projects"
-            onLoadComplete={handleLoadComplete}
-          />
-        </div>
-      )}
-
       {/* Main content with fade-in */}
       <div
         className={`transition-opacity duration-1000 ${
